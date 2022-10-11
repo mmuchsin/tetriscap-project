@@ -1,0 +1,9 @@
+dateparser
+newspaper3k
+pandas
+numpy
+streamlit
+transformers
+torch
+scikit-learn
+sentence-transformers
