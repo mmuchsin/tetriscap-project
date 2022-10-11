@@ -13,7 +13,7 @@ from matplotlib.colors import Normalize
 #Page Config
 st.set_page_config(
     page_title = "Muchsin | Tetris Capstone Project",
-    page_icon = (":sparkles:"),
+    page_icon = ("🔥"),
     layout = 'wide')
     
 st.image("./src/images/hoax.png")
