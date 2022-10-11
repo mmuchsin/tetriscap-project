@@ -3,6 +3,7 @@ newspaper3k
 pandas
 plotly
 matplotlib
+seaborn
 numpy
 streamlit
 transformers
