@@ -1,7 +1,7 @@
 import pandas as pd
 import pathlib
 
-DATA_DIR = pathlib.Path.cwd().parent.joinpath("data")
+DATA_DIR = pathlib.Path.cwd().joinpath("src", "data")
 
 def get_literasi():
     literasi = pd.read_excel(DATA_DIR.joinpath("indeks-literasi-digital-indonesia.xlsx"))
