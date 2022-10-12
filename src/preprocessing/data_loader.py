@@ -11,6 +11,6 @@ def get_kominfo():
     kominfo = pd.read_csv(DATA_DIR.joinpath("data_hoax_2020_2021_kominfo.csv", parse_dates=["date"]))
     return kominfo
 
-def get_turnbackoax():
-    turnbackoax = pd.read_csv(DATA_DIR.joinpath("turnback2020-2021"))
-    return turnbackoax
+#def get_turnbackoax():
+#    turnbackoax = pd.read_csv(DATA_DIR.joinpath("turnback2020-2021.csv"))
+#    return turnbackoax
