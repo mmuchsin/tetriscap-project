@@ -97,15 +97,27 @@ st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 #BAGIAN 3: Korelasi
 st.subheader("Korelasi")
 
-col11, col12, col21, col22 = st.columns(4, gap = "medium")
+col1, col2 = st.columns(2, gap="large")
 
-with col11:
+with col1:
     st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
                 dan Jumlah Hoaks Per Tahun</div>""", unsafe_allow_html=True)
     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
     st.dataframe(corr_data, use_container_width=True)
 
-with col21:   
+with col2:   
+    st.write(
+        """
+        Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
+        literasidigital sebesar 3.46 dengan total hoaks yang tercatat di web
+        kominfo sebanyak 3.337 hoaks.
+        
+        """
+    )
+
+col1, col2 = st.columns(2, gap="large")
+
+with col1:
     st.markdown("""<div style='text-align: center'> Heatmap Korelasi Indeks Digital
                 Literasi dengan Jumlah Hoaks</div>""", unsafe_allow_html=True)
     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
@@ -113,11 +125,9 @@ with col21:
     fig = px.imshow(corr_table, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
     
-with col22:
+with col2:
     st.write(
         """
-        Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks literasi
-        digital sebesar 3.46 dengan total hoaks yang tercatat di web kominfo sebanyak 3.337 hoaks
         Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
         """
     )
