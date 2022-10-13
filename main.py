@@ -130,7 +130,8 @@ with col1:
 with col2:
     st.write(
         """
-        Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
+        Dari tampilan heatmap di samping, kita dapat mengetahui bahwa indeks literasi
+        digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
         """
     )
 
