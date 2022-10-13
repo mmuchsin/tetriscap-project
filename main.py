@@ -109,8 +109,10 @@ with col2:
     st.write(
         """
         Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
-        literasidigital sebesar 3.46 dengan total hoaks yang tercatat di web
-        kominfo sebanyak 3.337 hoaks.
+        literasidigital sebesar 3,46 dengan total hoaks yang tercatat di web
+        kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
+        literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
+        kominfo selama 7 bulan sebanyak 1.115 hoaks.
         
         """
     )
