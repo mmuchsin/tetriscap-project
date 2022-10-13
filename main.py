@@ -100,12 +100,14 @@ st.subheader("Korelasi")
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
+    st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
+    
+with col2:  
     st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
                 dan Jumlah Hoaks</div>""", unsafe_allow_html=True)
     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
     st.dataframe(corr_data, use_container_width=True)
     
-with col2:    
     st.markdown("""<div style='text-align: center'> Heatmap Korelasi Indeks Digital
                 Literasi dengan Jumlah Hoaks</div>""", unsafe_allow_html=True)
     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
@@ -113,7 +115,7 @@ with col2:
     fig = px.imshow(corr_table, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
     
-st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
+
  
 #BAGIAN 4: Kesimpulan
 st.subheader("Kesimpulan")
