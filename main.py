@@ -113,7 +113,13 @@ with col1:
     st.plotly_chart(fig, use_container_width=True)
     
 with col2:
-    st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
+    st.write(
+        """
+        Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks literasi
+        digital sebesar 3.46 dengan total hoaks yang tercatat di web kominfo sebanyak 3.337 hoaks
+        Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
+        """
+    )
 
  
 #BAGIAN 4: Kesimpulan
