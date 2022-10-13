@@ -100,9 +100,6 @@ st.subheader("Korelasi")
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
-    st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
-    
-with col2:  
     st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
                 dan Jumlah Hoaks</div>""", unsafe_allow_html=True)
     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
@@ -115,6 +112,8 @@ with col2:
     fig = px.imshow(corr_table, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
     
+with col2:
+    st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
 
  
 #BAGIAN 4: Kesimpulan
