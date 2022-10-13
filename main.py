@@ -99,6 +99,22 @@ st.subheader("Korelasi")
 
 col1, col2 = st.columns(2, gap="large")
 
+st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
+                dan Jumlah Hoaks Per Tahun</div>""", unsafe_allow_html=True)
+    corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
+    st.dataframe(corr_data, use_container_width=True)
+
+st.write(
+        """
+        Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
+        literasidigital sebesar 3,46 dengan total hoaks yang tercatat di web
+        kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
+        literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
+        kominfo selama 7 bulan sebanyak 1.115 hoaks.
+        
+        """
+    )
+
 with col1:
     st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
                 dan Jumlah Hoaks Per Tahun</div>""", unsafe_allow_html=True)
