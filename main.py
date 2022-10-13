@@ -103,7 +103,7 @@ st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
                 dan Jumlah Hoaks Per Tahun</div>""", unsafe_allow_html=True)
 
 corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
-st.dataframe(corr_data, use_container_width=True)
+st.dataframe(corr_data)
 
 st.write(
         """
