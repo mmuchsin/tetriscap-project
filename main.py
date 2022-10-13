@@ -144,6 +144,8 @@ st.write(
         Tingkat literasi digital di Indonesia belum bisa dikatakan tinggi.
         Mengacu pada skor indeks literasi digital yang hanya berada sedikit
         di atas 3 pada tahun 2020. Dan Hanya bertambah 0.03 poin di tahun 2021.
+        Walaupun demikian penyebaran hoaks secama umum menurun dari awal tahun
+        2020 sampai pertengahan 2021
         
         """
     )
