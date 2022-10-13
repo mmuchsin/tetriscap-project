@@ -97,7 +97,7 @@ st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 #BAGIAN 3: Korelasi
 st.subheader("Korelasi")
 
-col11, col12, col21, col22 = st.columns([2, 2], gap = "medium")
+col11, col12, col21, col22 = st.columns(4, gap = "medium")
 
 with col11:
     st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
