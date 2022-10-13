@@ -86,7 +86,7 @@ with col2:
 
 st.markdown(
         """
-        Trend penyebaran hoax secara garis besar menurun.
+        Secara garis besar trend penyebaran hoaks selama awal tahun 2020 sampai pertengahan tahun 2021 menurun.
         """,
         unsafe_allow_html=True
     )
