@@ -139,6 +139,14 @@ with col2:
 #BAGIAN 4: Kesimpulan
 st.subheader("Kesimpulan")
 
+st.write(
+        """
+        Tingkat literasi digital di Indonesia belum bisa dikatakan tinggi.
+        Mengacu pada skor indeks literasi digital yang hanya berada sedikit
+        di atas 3 pada tahun 2020. Dan Hanya bertambah 0.03 poin di tahun 2021.
+        
+        """
+    )
  
 #BAGIAN 5: Solusi
 st.subheader("Solusi")
