@@ -106,10 +106,12 @@ with col1:
     st.dataframe(corr_data, use_container_width=True)
     
 with col2:    
-    st.markdown("""<div style='text-align: center'> Tabel Korelasi Indeks Digital
+    st.markdown("""<div style='text-align: center'> Heatmap Korelasi Indeks Digital
                 Literasi dengan Jumlah Hoaks</div>""", unsafe_allow_html=True)
     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
-    st.dataframe(corr_table, use_container_width=True)
+    #st.dataframe(corr_table, use_container_width=True)
+    fig = px.imshow(corr_table, text_auto=True)
+    st.plotly_chart(fig, use_container_width=True)
     
 st.write("Indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif")
  
