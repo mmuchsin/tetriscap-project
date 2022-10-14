@@ -28,13 +28,15 @@ st.set_page_config(
 st.image("./src/images/hoax.png")
 
 st.markdown(
-    "# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Berita Hoaks Tahun 2020-2021"
+    """# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Berita
+    Hoaks Tahun 2020-2021"""
 )
 
+# Bagian 0: Ringkasan Eksekutif
+st.subheader("Ringkasan Eksekutif")
+
 # Bagian 0: Latar Belakang
-st.subheader(
-    "Latar Belakang"
-)
+st.subheader("Latar Belakang")
 
 st.markdown(
     """
