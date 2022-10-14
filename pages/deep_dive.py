@@ -28,17 +28,16 @@ st.set_page_config(
 st.image("./src/images/hoax.png")
 
 st.markdown(
-    """# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Berita
-    Hoaks Tahun 2020-2021"""
+    "# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Berita Hoaks Tahun 2020-2021"
 )
 
-# Bagian 0: Ringkasan Eksekutif
-st.subheader("Ringkasan Eksekutif")
+# Executive Summary
+st.subheader("Executive Summary")
 
-# Bagian 0: Latar Belakang
+# Latar Belakang
 st.subheader("Latar Belakang")
 
-st.markdown(
+st.write(
     """
     *“Masyarakat Telematika Indonesia (Mastel) dan Asosiasi Penyelenggara Jasa
     Internet Indonesia (APJII) memandang munculnya fenomena penyebaran berita
@@ -47,9 +46,21 @@ st.markdown(
     """
 )
 
+# Problem Statement
+st.subheader("Problem Statement")
+
+# Tujuan
+st.subheader("Tujuan")
+
+st.markdown(
+    """
+    
+    """
+)
+
 st.write("Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?")
 
-#BAGIAN 1: Literasi Digital di Indonesia
+#Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
 
 st.markdown("""<div style='text-align: center'> Indeks Literasi Digital
@@ -79,7 +90,7 @@ st.markdown(
     )
 
 
-#BAGIAN 2: Berita Hoaks di Indonesia
+#Berita Hoaks di Indonesia
 st.subheader("Berita Hoaks di Indonesia")
 
 col1, col2 = st.columns(2, gap = "medium")
@@ -110,7 +121,7 @@ st.markdown(
 st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 
 
-#BAGIAN 3: Korelasi
+#Korelasi
 st.subheader("Korelasi")
 
 col1, col2 = st.columns([2, 3], gap="large")
@@ -152,7 +163,7 @@ with col2:
     )
 
 
-#BAGIAN 4: Kesimpulan
+#Kesimpulan
 st.subheader("Kesimpulan")
 
 st.write(
@@ -168,7 +179,7 @@ st.write(
         """
     )
 
-#BAGIAN 5: Solusi
+#Solusi
 st.subheader("Solusi")
 
 st.write(
@@ -179,7 +190,7 @@ st.write(
 )
 
 
-#BAGIAN 6: Daftar Pustaka
+#Daftar Pustaka
 st.subheader("Daftar Pustaka")
 
 st.markdown(
