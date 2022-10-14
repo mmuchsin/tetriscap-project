@@ -61,6 +61,15 @@ st.write(
 # Tujuan
 st.subheader("Tujuan")
 
+st.write(
+    """
+    - Untuk mengetahui penyebaran hoaks di Indonesia pada tahun 2020-2021?
+    - Untuk mengetahui indeks literasi digital Indonesia pada tahun 2020-2021?
+    - Untuk mengetahui korelasi antara jumlah hoaks pertahun dengan indeks literasi
+      digital pada tahun 2020-2021?
+    """
+)
+
 st.markdown(
     """
     
