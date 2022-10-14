@@ -42,7 +42,9 @@ st.write(
     *“Masyarakat Telematika Indonesia (Mastel) dan Asosiasi Penyelenggara Jasa
     Internet Indonesia (APJII) memandang munculnya fenomena penyebaran berita
     hoax lantaran masih rendahnya literasi informasi digital masyarakat negeri
-    melalui internet”, dikutip dari Suara.com, Selasa (10/01/2017).*
+    melalui internet”, dikutip dari Suara.com, Selasa (10/01/2017).* Pernyataan
+    di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan
+    terkini?
     """
 )
 
@@ -70,13 +72,6 @@ st.write(
     """
 )
 
-st.markdown(
-    """
-    
-    """
-)
-
-st.write("Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?")
 
 #Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
