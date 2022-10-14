@@ -49,6 +49,13 @@ st.write(
 # Problem Statement
 st.subheader("Problem Statement")
 
+st.write(
+    """
+    - Bagaimanakah penyebaran hoaks di Indonesia pada tahun 2020-2021?
+    - Bagaimanakah indeks literasi digital Indonesia pada tahun 2020-2021?
+    """
+)
+
 # Tujuan
 st.subheader("Tujuan")
 
