@@ -53,6 +53,8 @@ st.write(
     """
     - Bagaimanakah penyebaran hoaks di Indonesia pada tahun 2020-2021?
     - Bagaimanakah indeks literasi digital Indonesia pada tahun 2020-2021?
+    - Bagaimanakah korelasi antara jumlah hoaks pertahun dengan indeks literasi
+      digital pada tahun 2020-2021?
     """
 )
 
