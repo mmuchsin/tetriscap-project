@@ -10,11 +10,10 @@ import matplotlib.pyplot as plt
 from src.preprocessor import data_loader, data_cleaner
 from matplotlib.colors import Normalize
 
-#Page Config
+# Page Config
 st.set_page_config(
-    page_title = "Muchsin | Tetris Capstone Project",
-    page_icon = ("🔥"),
-    layout = 'wide')
+    page_title="Muchsin | Tetris Capstone Project", page_icon=("🔥"), layout="wide"
+)
 
 st.image("./src/images/hoax.png")
 
@@ -31,45 +30,59 @@ st.markdown(
     """
 )
 
-st.write("Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?")
+st.write(
+    "Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?"
+)
 
-#Hoaks di Indonesia
+# Hoaks di Indonesia
 st.subheader("Berita Hoaks di Indonesia")
 
-col1, col2 = st.columns(2, gap = "medium")
+col1, col2 = st.columns(2, gap="medium")
 
-st.markdown("""<div style='text-align: center'> Sumber data: kominfo</div>""", unsafe_allow_html=True)
+st.markdown(
+    """<div style='text-align: center'> Sumber data: kominfo</div>""",
+    unsafe_allow_html=True,
+)
 
 with col1:
-    st.markdown("""<div style='text-align: center'> Jumlah Hoaks
-                Indonesia Tahun 2020-2021</div>""", unsafe_allow_html=True)
+    st.markdown(
+        """<div style='text-align: center'> Jumlah Hoaks
+                Indonesia Tahun 2020-2021</div>""",
+        unsafe_allow_html=True,
+    )
     kominfo_tahunan = data_cleaner.kominfo_tahunan()
     fig = px.bar(kominfo_tahunan, x="bulan", y="total", color="tahun", barmode="group")
     st.plotly_chart(fig, use_container_width=True)
 
 with col2:
-    st.markdown("""<div style='text-align: center'> Trend Hoaks
-                Indonesia Tahun 2020-2021</div>""", unsafe_allow_html=True)
+    st.markdown(
+        """<div style='text-align: center'> Trend Hoaks
+                Indonesia Tahun 2020-2021</div>""",
+        unsafe_allow_html=True,
+    )
     kominfo_tahunan = data_cleaner.kominfo_tahunan()
     fig = px.line(kominfo_tahunan, x="bulan", y="total", color="tahun")
     st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(
-        """
+    """
         Secara garis besar trend penyebaran hoaks selama awal tahun 2020 sampai pertengahan tahun 2021 menurun.
         """,
-        unsafe_allow_html=True
-    )
+    unsafe_allow_html=True,
+)
 
 st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 
-#Literasi Digital di Indonesia
+# Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
 
-st.markdown("""<div style='text-align: center'> Indeks Literasi Digital
-                Indonesia Tahun 2020-2021</div>""", unsafe_allow_html=True)
+st.markdown(
+    """<div style='text-align: center'> Indeks Literasi Digital
+                Indonesia Tahun 2020-2021</div>""",
+    unsafe_allow_html=True,
+)
 
-col1, col2 = st.columns(2, gap = "medium")
+col1, col2 = st.columns(2, gap="medium")
 literasi = data_cleaner.literasi_only()
 literasi_mod = literasi.copy()
 literasi_mod["tahun"] = literasi_mod["tahun"].apply(str)
@@ -83,24 +96,30 @@ with col2:
     fig = px.line(literasi_mod, x="tahun", y="indeks_literasi_digital")
     st.plotly_chart(fig, use_container_width=True)
 
-st.markdown("""<div style='text-align: center'> Sumber data: katadata</div>""", unsafe_allow_html=True)
+st.markdown(
+    """<div style='text-align: center'> Sumber data: katadata</div>""",
+    unsafe_allow_html=True,
+)
 
 st.markdown(
-        """
+    """
         Dari tahun 2020 sampai 2021 indeks literasi digital Indonesia hanya meningkat 0.03 poin
         """,
-        unsafe_allow_html=True
-    )
+    unsafe_allow_html=True,
+)
 
 
-#Korelasi
+# Korelasi
 st.subheader("Korelasi")
 
 col1, col2 = st.columns([2, 3], gap="large")
 
 with col1:
-    st.markdown("""<div style='text-align: center'> Tabel Indeks Literasi Digital
-                dan Jumlah Hoaks Per Tahun</div>""", unsafe_allow_html=True)
+    st.markdown(
+        """<div style='text-align: center'> Tabel Indeks Literasi Digital
+                dan Jumlah Hoaks Per Tahun</div>""",
+        unsafe_allow_html=True,
+    )
     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
     st.dataframe(corr_data, use_container_width=True)
 
@@ -119,10 +138,13 @@ with col2:
 col1, col2 = st.columns([2, 3], gap="large")
 
 with col1:
-    st.markdown("""<div style='text-align: center'> Heatmap Korelasi Indeks Digital
-                Literasi dengan Jumlah Hoaks</div>""", unsafe_allow_html=True)
+    st.markdown(
+        """<div style='text-align: center'> Heatmap Korelasi Indeks Digital
+                Literasi dengan Jumlah Hoaks</div>""",
+        unsafe_allow_html=True,
+    )
     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
-    #st.dataframe(corr_table, use_container_width=True)
+    # st.dataframe(corr_table, use_container_width=True)
     fig = px.imshow(corr_table, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
 
@@ -135,11 +157,11 @@ with col2:
     )
 
 
-#Kesimpulan
+# Kesimpulan
 st.subheader("Kesimpulan")
 
 st.write(
-        """
+    """
         - Tingkat literasi digital di Indonesia belum bisa dikatakan tinggi.
         Mengacu pada skor indeks literasi digital yang hanya berada sedikit
         di atas 3 pada tahun 2020. Dan Hanya bertambah 0.03 poin di tahun 2021.
@@ -149,9 +171,9 @@ st.write(
 
 
         """
-    )
+)
 
-#Solusi
+# Solusi
 st.subheader("Solusi")
 
 st.write(
@@ -162,7 +184,7 @@ st.write(
 )
 
 
-#Daftar Pustaka
+# Daftar Pustaka
 st.subheader("Daftar Pustaka")
 
 st.markdown(
