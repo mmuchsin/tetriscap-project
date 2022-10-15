@@ -47,18 +47,13 @@ cpd = (
 )
 fig = plt.figure()
 sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
+plt.title("Trend Hoaks Indonesia Tahun 2020-2021")
 plt.xticks(rotation=30)
 st.pyplot(fig)
 st.markdown(
     """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
     unsafe_allow_html=True,
 )
-
-st.markdown(
-        """<div style='text-align: center'> Trend Hoaks
-                Indonesia Tahun 2020-2021</div>""",
-        unsafe_allow_html=True,
-    )
 
 st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 
