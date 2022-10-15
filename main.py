@@ -18,7 +18,7 @@ st.set_page_config(
 st.image("./src/images/hoax.png")
 
 st.markdown(
-    "# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Berita Hoaks Tahun 2020-2021"
+    "# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
 )
 
 st.markdown(
