@@ -56,16 +56,16 @@ lineplot = sns.lineplot(
     x="month",
     y="total",
     hue="year",
-    style="total",
     markers=True,
     dashes=False,
     palette=palette,
 )
+plt.xticks(rotation=30)
 
-for item, color in zip(cpd.groupby("total"), palette):
-    # item[1] is a grouped data frame
-    for x, y, m in item[1][["x", "y", "mark_value"]].values:
-        ax.text(x, y, f"{m:.2f}", color=color)
+# for item, color in zip(cpd.groupby("total"), palette):
+#     # item[1] is a grouped data frame
+#     for x, y, m in item[1][["x", "y", "mark_value"]].values:
+#         ax.text(x, y, f"{m:.2f}", color=color)
 st.pyplot(fig)
 st.markdown(
     """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
