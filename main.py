@@ -54,40 +54,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
-col1, col2 = st.columns(2, gap="medium")
-
 st.markdown(
-    """<div style='text-align: center'> Sumber data: kominfo</div>""",
-    unsafe_allow_html=True,
-)
-
-with col1:
-    st.markdown(
-        """<div style='text-align: center'> Jumlah Hoaks
-                Indonesia Tahun 2020-2021</div>""",
-        unsafe_allow_html=True,
-    )
-    kominfo_tahunan = data_cleaner.kominfo_tahunan()
-    fig = px.bar(kominfo_tahunan, x="bulan", y="total", color="tahun", barmode="group")
-    st.plotly_chart(fig, use_container_width=True)
-
-with col2:
-    st.markdown(
         """<div style='text-align: center'> Trend Hoaks
                 Indonesia Tahun 2020-2021</div>""",
         unsafe_allow_html=True,
     )
-    kominfo_tahunan = data_cleaner.kominfo_tahunan()
-    fig = px.line(kominfo_tahunan, x="bulan", y="total", color="tahun")
-    st.plotly_chart(fig, use_container_width=True)
-
-st.markdown(
-    """
-        Secara garis besar trend penyebaran hoaks selama awal tahun 2020 sampai pertengahan tahun 2021 menurun.
-        """,
-    unsafe_allow_html=True,
-)
 
 st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 
