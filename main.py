@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 
-from src.preprocessing import data_loader, data_cleaner
+from src.preprocessor import data_loader, data_cleaner
 from matplotlib.colors import Normalize
 
 #Page Config
@@ -15,7 +15,7 @@ st.set_page_config(
     page_title = "Muchsin | Tetris Capstone Project",
     page_icon = ("🔥"),
     layout = 'wide')
-    
+
 st.image("./src/images/hoax.png")
 
 st.markdown(
@@ -48,8 +48,8 @@ with col1:
     fig = px.bar(literasi, x="tahun", y="indeks_literasi_digital", color="tahun")
     fig.layout.update(showlegend=False)
     st.plotly_chart(fig, use_container_width=True)
-    
-with col2:   
+
+with col2:
     fig = px.line(literasi_mod, x="tahun", y="indeks_literasi_digital")
     st.plotly_chart(fig, use_container_width=True)
 
@@ -105,7 +105,7 @@ with col1:
     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
     st.dataframe(corr_data, use_container_width=True)
 
-with col2:   
+with col2:
     st.write(
         """
         Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
@@ -113,7 +113,7 @@ with col2:
         kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
         literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
         kominfo selama 7 bulan sebanyak 1.115 hoaks.
-        
+
         """
     )
 
@@ -126,7 +126,7 @@ with col1:
     #st.dataframe(corr_table, use_container_width=True)
     fig = px.imshow(corr_table, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
-    
+
 with col2:
     st.write(
         """
@@ -135,7 +135,7 @@ with col2:
         """
     )
 
- 
+
 #BAGIAN 4: Kesimpulan
 st.subheader("Kesimpulan")
 
@@ -147,11 +147,11 @@ st.write(
         Walaupun demikian trend penyebaran hoaks secara umum menurun dari awal tahun
         2020 sampai pertengahan 2021.
         - indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
-        
-        
+
+
         """
     )
- 
+
 #BAGIAN 5: Solusi
 st.subheader("Solusi")
 

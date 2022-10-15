@@ -1,7 +1,7 @@
 import dateparser
 import pandas as pd
 
-from src.preprocessing import data_loader
+from src.preprocessor import data_loader
 
 # preprocessing literasi data
 def literasi_only():
@@ -23,7 +23,7 @@ def literasi_only():
 
     literasi_only["indeks_literasi_digital"] = pd.to_numeric(literasi_only["indeks_literasi_digital"])
     return literasi_only
-    
+
 
 
 # preprocessing hoax data
@@ -42,9 +42,9 @@ def kominfo_tahunan():
 def get_corr_data(df1, df2):
     df1["indeks_literasi_digital"] = pd.to_numeric(df1["indeks_literasi_digital"])
     df1["tahun"] = df1["tahun"].apply(int)
-    
+
     data = df2.groupby(["tahun"])["total"].sum().reset_index().rename(columns={"total": "total_hoax"})
     data["tahun"] = data["tahun"].apply(int)
-    
+
     combine = pd.merge(df1, data, how="inner", on="tahun")
     return combine
