@@ -62,7 +62,7 @@ lineplot = sns.lineplot(
     palette=palette,
 )
 
-for item, color in zip(cpd.groupby("label"), palette):
+for item, color in zip(cpd.groupby("total"), palette):
     # item[1] is a grouped data frame
     for x, y, m in item[1][["x", "y", "mark_value"]].values:
         ax.text(x, y, f"{m:.2f}", color=color)
