@@ -19,5 +19,5 @@ def get_kominfo():
 
 
 def get_combine():
-    combine = pd.read_csv(DATA_DIR.joinpath("combain.csv"))
+    combine = pd.read_csv(DATA_DIR.joinpath("combine.csv"))
     return combine
