@@ -33,37 +33,7 @@ st.markdown(
 
 st.write("Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?")
 
-#BAGIAN 1: Literasi Digital di Indonesia
-st.subheader("Literasi Digital di Indonesia")
-
-st.markdown("""<div style='text-align: center'> Indeks Literasi Digital
-                Indonesia Tahun 2020-2021</div>""", unsafe_allow_html=True)
-
-col1, col2 = st.columns(2, gap = "medium")
-literasi = data_cleaner.literasi_only()
-literasi_mod = literasi.copy()
-literasi_mod["tahun"] = literasi_mod["tahun"].apply(str)
-
-with col1:
-    fig = px.bar(literasi, x="tahun", y="indeks_literasi_digital", color="tahun")
-    fig.layout.update(showlegend=False)
-    st.plotly_chart(fig, use_container_width=True)
-
-with col2:
-    fig = px.line(literasi_mod, x="tahun", y="indeks_literasi_digital")
-    st.plotly_chart(fig, use_container_width=True)
-
-st.markdown("""<div style='text-align: center'> Sumber data: katadata</div>""", unsafe_allow_html=True)
-
-st.markdown(
-        """
-        Dari tahun 2020 sampai 2021 indeks literasi digital Indonesia hanya meningkat 0.03 poin
-        """,
-        unsafe_allow_html=True
-    )
-
-
-#BAGIAN 2: Berita Hoaks di Indonesia
+#Hoaks di Indonesia
 st.subheader("Berita Hoaks di Indonesia")
 
 col1, col2 = st.columns(2, gap = "medium")
@@ -93,8 +63,37 @@ st.markdown(
 
 st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
 
+#Literasi Digital di Indonesia
+st.subheader("Literasi Digital di Indonesia")
 
-#BAGIAN 3: Korelasi
+st.markdown("""<div style='text-align: center'> Indeks Literasi Digital
+                Indonesia Tahun 2020-2021</div>""", unsafe_allow_html=True)
+
+col1, col2 = st.columns(2, gap = "medium")
+literasi = data_cleaner.literasi_only()
+literasi_mod = literasi.copy()
+literasi_mod["tahun"] = literasi_mod["tahun"].apply(str)
+
+with col1:
+    fig = px.bar(literasi, x="tahun", y="indeks_literasi_digital", color="tahun")
+    fig.layout.update(showlegend=False)
+    st.plotly_chart(fig, use_container_width=True)
+
+with col2:
+    fig = px.line(literasi_mod, x="tahun", y="indeks_literasi_digital")
+    st.plotly_chart(fig, use_container_width=True)
+
+st.markdown("""<div style='text-align: center'> Sumber data: katadata</div>""", unsafe_allow_html=True)
+
+st.markdown(
+        """
+        Dari tahun 2020 sampai 2021 indeks literasi digital Indonesia hanya meningkat 0.03 poin
+        """,
+        unsafe_allow_html=True
+    )
+
+
+#Korelasi
 st.subheader("Korelasi")
 
 col1, col2 = st.columns([2, 3], gap="large")
@@ -136,7 +135,7 @@ with col2:
     )
 
 
-#BAGIAN 4: Kesimpulan
+#Kesimpulan
 st.subheader("Kesimpulan")
 
 st.write(
@@ -152,7 +151,7 @@ st.write(
         """
     )
 
-#BAGIAN 5: Solusi
+#Solusi
 st.subheader("Solusi")
 
 st.write(
@@ -163,7 +162,7 @@ st.write(
 )
 
 
-#BAGIAN 6: Daftar Pustaka
+#Daftar Pustaka
 st.subheader("Daftar Pustaka")
 
 st.markdown(
