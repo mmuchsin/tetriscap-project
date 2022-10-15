@@ -45,10 +45,27 @@ cpd = (
     .rename(columns={"title": "total"})
     .sort_values(by=["order_month"])
 )
-fig = plt.figure(figsize=())
-sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
-plt.title("Trend Hoaks Indonesia Tahun 2020-2021")
-plt.xticks(rotation=30)
+# fig = plt.figure(figsize=())
+# sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
+# plt.title("Trend Hoaks Indonesia Tahun 2020-2021")
+# plt.xticks(rotation=30)
+fig, ax = plt.subplots(1, 1)
+palette = ["b", "g"]
+lineplot = sns.lineplot(
+    data=cpd,
+    x="month",
+    y="total",
+    hue="year",
+    style="total",
+    markers=True,
+    dashes=False,
+    palette=palette,
+)
+
+for item, color in zip(cpd.groupby("label"), palette):
+    # item[1] is a grouped data frame
+    for x, y, m in item[1][["x", "y", "mark_value"]].values:
+        ax.text(x, y, f"{m:.2f}", color=color)
 st.pyplot(fig)
 st.markdown(
     """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
