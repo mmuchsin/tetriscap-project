@@ -48,6 +48,11 @@ cpd = (
 fig = sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
 plt.xticks(rotation=30)
 st.pyplot(fig)
+st.markdown(
+    """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
+    unsafe_allow_html=True,
+)
+
 
 col1, col2 = st.columns(2, gap="medium")
 
