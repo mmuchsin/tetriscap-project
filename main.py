@@ -45,7 +45,7 @@ cpd = (
     .rename(columns={"title": "total"})
     .sort_values(by=["order_month"])
 )
-fig = plt.figure(figsize=(2, 1))
+fig = plt.figure(figsize=(2, 1 ))
 sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
 plt.title("Trend Hoaks Indonesia Tahun 2020-2021")
 plt.xticks(rotation=30)
