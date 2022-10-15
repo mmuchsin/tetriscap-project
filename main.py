@@ -35,7 +35,7 @@ st.write(
 )
 
 # Hoaks di Indonesia
-st.subheader("Berita Hoaks di Indonesia")
+st.subheader("Hoaks di Indonesia")
 
 combine = data_loader.get_combine()
 cpd = (
@@ -45,7 +45,8 @@ cpd = (
     .rename(columns={"title": "total"})
     .sort_values(by=["order_month"])
 )
-fig = sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
+fig = plt.figure()
+sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
 plt.xticks(rotation=30)
 st.pyplot(fig)
 st.markdown(
