@@ -1,14 +1,10 @@
-import dateparser
 import numpy as np
 import pandas as pd
-import plotly.express as px
 import streamlit as st
 import seaborn as sns
-import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 
 from src.preprocessor import data_loader, data_cleaner
-from matplotlib.colors import Normalize
 
 # Page Config
 st.set_page_config(
@@ -18,7 +14,10 @@ st.set_page_config(
 st.image("./src/images/hoax.png")
 
 st.markdown(
-    "# Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
+    "# Hoaks dimana-mana, Literasi Digital di Indonesia Separah itu kah?"
+)
+st.write(
+    "Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
 )
 
 st.markdown(
