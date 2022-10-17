@@ -285,26 +285,6 @@ st.write(
     """
 )
 
-st.markdown(
-    """<div style='text-align: center'> Indeks Literasi Digital
-                Indonesia Tahun 2020-2021</div>""",
-    unsafe_allow_html=True,
-)
-
-
-# Korelasi
-st.subheader("Hoaks vs Literasi Digital")
-
-st.write(
-    """
-    >*Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital sebesar -1.*
-
-    Dengan kata lain, hubungan antara hoaks dan literasi digital
-    berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun,
-    begitu juga sebaliknya.
-    """
-)
-
 col1, col2 = st.columns(2)
 
 with col1:
@@ -353,6 +333,26 @@ with col2:
     ax.spines['right'].set_visible(False)
 
     st.pyplot(fig)
+
+st.markdown(
+    """<div style='text-align: center'> Sumber data: katadata</div>""",
+    unsafe_allow_html=True,
+)
+
+
+# Korelasi
+st.subheader("Hoaks vs Literasi Digital")
+
+st.write(
+    """
+    >*Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital sebesar -1.*
+
+    Dengan kata lain, hubungan antara hoaks dan literasi digital
+    berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun,
+    begitu juga sebaliknya.
+    """
+)
+
 
 # Penutup
 st.subheader("Penutup")
