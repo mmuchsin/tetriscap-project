@@ -75,6 +75,8 @@ st.markdown(
     yang dibuat-buat atau direkayasa untuk menutupi informasi yang sebenarnya.
     Dengan kata lain, hoax diartikan sebagai upaya pemutarbalikan fakta menggunakan
     informasi yang seolah-olah meyakinkan akan tetapi tidak dapat diverifikasi kebenarannya.
+    Berikut merupakan grafik trend jumlah hoaks yang tercatat oleh kominfo dan
+    komunitas turnbackhoak pada tahun 2020-2021.
     """
 )
 
@@ -86,10 +88,7 @@ cpd = (
     .rename(columns={"title": "total"})
     .sort_values(by=["order_month"])
 )
-# fig = plt.figure(figsize=())
-# sns.lineplot(data=cpd, x="month", y="total", hue="year", palette=["cyan", "lime"])
-# plt.title("Trend Hoaks Indonesia Tahun 2020-2021")
-# plt.xticks(rotation=30)
+
 fig, ax = plt.subplots(1, 1)
 palette = ["b", "g"]
 lineplot = sns.lineplot(
@@ -101,6 +100,7 @@ lineplot = sns.lineplot(
     dashes=False,
     palette=palette,
 )
+ax.set_title("Trend Jumlah Hoaks 2020-2021")
 plt.xticks(rotation=30)
 
 col1, col2, col3 = st.columns([1, 2, 1])
