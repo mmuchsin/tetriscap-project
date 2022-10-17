@@ -20,17 +20,24 @@ st.write(
     "### Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
 )
 
-st.markdown(
+st.write(
     """
-    *“Masyarakat Telematika Indonesia (Mastel) dan Asosiasi Penyelenggara Jasa
-    Internet Indonesia (APJII) memandang munculnya fenomena penyebaran berita
-    hoax lantaran masih rendahnya literasi informasi digital masyarakat negeri
-    melalui internet”, dikutip dari Suara.com, Selasa (10/01/2017).*
+    by M Muchsin
     """
 )
 
-st.write(
-    "Pernyataan di atas dikemukakan 5 tahun yang lalu. Lantas bagaimana dengan keadaan terkini?"
+# Ringkasan Eksekutif
+st.subheader("Ringkasan Eksekutif")
+
+st.markdown(
+    """
+    Indeks Literasi Digital Indonesia padat tahun 2020 dan 2021 masih berada
+    pada level “sedang” dengan skor 3,46 dan 3,49. Dari 34 provinsi di Indonesia,
+    DI Yogyakarta memiliki Indeks Literasi Digital tertinggi tahun 2021, skor
+    3,71 (dari skala 1-5). Sementara itu, Maluku Utara merupakan provinsi dengan
+    skor indeks terendah, yaitu 3,18.
+
+    """
 )
 
 # Hoaks di Indonesia
