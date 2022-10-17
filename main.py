@@ -309,7 +309,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     lp20 = data_cleaner.get_literasi_prov20_clean()
-    colors = sns.color_palette("BLues_r", n_colors=34)
+    colors = sns.color_palette("Blues_r", n_colors=34)
     fig, ax = plt.subplots(figsize=(8, 10))
     bar = sns.barplot(
         data=lp20.sort_values("indeks_literasi_digital", ascending=False),
