@@ -357,7 +357,7 @@ with col1:
 with col2:
     st.write(
     """
-    Secara umum, skor Indeks Literasi Digital per provinsi ada di rentang 3,71
+    Pada tahun 2021 skor Indeks Literasi Digital per provinsi ada di rentang 3,71
     hingga 3,18. Skor tertinggi dimiliki oleh Provinsi DI Yogyakarta (3,71) dan
     skor terendah dimiliki oleh Provinsi Maluku Utara (3,18). Sementara itu,
     DKI Jakarta sebagai ibu kota negara memiliki skor Indeks Literasi Digital
