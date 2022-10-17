@@ -78,7 +78,7 @@ def get_isi_hoaks():
 def get_literasi_prov20():
     df = pd.read_excel(
         DATA_DIR.joinpath("literasi_prov_2020.xlsx"),
-        heet_name="Sheet2"
+        sheet_name="Sheet2"
     )
     return df
 
