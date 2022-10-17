@@ -89,3 +89,16 @@ def get_literasi_prov21_clean():
     df.drop(columns=["Unnamed: 0"])
     df["tahun"] = 2021
     return df
+
+
+def get_penyebaran_hoaks():
+    df1 = data_loader.get_penyebaran_hoaks20()
+    df2 = data_loader.get_penyebaran_hoaks21()
+    df = pd.concat([df1, df2])
+    return df
+
+def get_isi_hoaks():
+    df1 = data_loader.get_isi_hoaks20()
+    df2 = data_loader.get_isi_hoaks21()
+    df = pd.concat([df1, df2])
+    return df
