@@ -51,10 +51,16 @@ st.markdown(
     khususnya media digital. Ditambah dengan adanya pandemi Covid-19 yang memicu
     terwujudnya new normal. Kebutuhan masyarakat akan informasi yang aktual dan
     faktual meningkat secara signifikan. Akan tetapi, seringkali berita yang
-    disajikan media online tidak lagi melalui proses penyuntingan yang ketat
+    disajikan media digital tidak lagi melalui proses penyuntingan yang ketat
     sehingga kebenaran informasi yang disajikan pun tidak dapat dipastikan.
     Bahkan, beberapa pihak, dengan sengaja menyebarkan hoaks untuk meraup
     keuntungan.
+    Penyebaran hoaks di Indonesia dinilai meresahkan sehingga diperlukan tindakan
+    serius untuk menekan angka penyebaran hoaks. Namun masih banyak masyarakat
+    yang secara tidak sadar menjadi sukarelawan dalam penyebaran hoaks. Sehingga
+    perlu adanya upaya peningkatan literasi media bagi masyarakat, khususnya
+    literasi digital.
+
     """
 )
 
@@ -147,50 +153,6 @@ st.write(
     """
 )
 
-# col1, col2 = st.columns([2, 3], gap="large")
-
-# with col1:
-#     st.markdown(
-#         """<div style='text-align: center'> Tabel Indeks Literasi Digital
-#                 dan Jumlah Hoaks Per Tahun</div>""",
-#         unsafe_allow_html=True,
-#     )
-#     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
-#     st.dataframe(corr_data, use_container_width=True)
-
-# with col2:
-#     st.write(
-#         """
-#         Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
-#         literasidigital sebesar 3,46 dengan total hoaks yang tercatat di web
-#         kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
-#         literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
-#         kominfo selama 7 bulan sebanyak 1.115 hoaks.
-
-#         """
-#     )
-
-# col1, col2 = st.columns([2, 3], gap="large")
-
-# with col1:
-#     st.markdown(
-#         """<div style='text-align: center'> Heatmap Korelasi Indeks Digital
-#                 Literasi dengan Jumlah Hoaks</div>""",
-#         unsafe_allow_html=True,
-#     )
-#     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
-#     # st.dataframe(corr_table, use_container_width=True)
-#     fig = px.imshow(corr_table, text_auto=True)
-#     st.plotly_chart(fig, use_container_width=True)
-
-# with col2:
-#     st.write(
-#         """
-#         Dari tampilan heatmap di samping, kita dapat mengetahui bahwa indeks literasi
-#         digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
-#         """
-#     )
-
 
 # Kesimpulan
 st.subheader("Kesimpulan")
@@ -224,6 +186,7 @@ st.subheader("Daftar Pustaka")
 
 st.markdown(
     """
+    - Amrullah, Firda, Abdul Hakim Yassi, Gusnawaty Gusnawaty. 2020. Modalitas Dalam Teks Berita Hoaks: Kajian Linguistik Sistemik Fungsional. *Jurnal Ilmu Budaya*
     - Fauzan Jamaludin. 2017. *Rendahnya literasi digital jadi penyebab penyebaran berita hoax*.https://www.merdeka.com/teknologi/rendahnya-literasi-digital-jadi-penyebab-penyebaran-berita-hoax.html
     - Vanya Karunia Mulia Putri. 2021. *Literasi Digital: Pengertian, Prinsip, Manfaat, Tantangan dan Contoh*. https://www.kompas.com/skola/read/2021/06/15/142539669/literasi-digital-pengertian-prinsip-manfaat-tantangan-dan-contoh
     - Vika Azkiya Dihni. 2022. *Indeks Literasi Digital Indonesia Membaik pada 2021*. https://databoks.katadata.co.id/datapublish/2022/07/13/indeks-literasi-digital-indonesia-membaik-pada-2021
