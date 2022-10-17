@@ -17,7 +17,7 @@ st.markdown(
     "# Hoaks dimana-mana, Literasi Digital di Indonesia Separah itu kah?"
 )
 st.write(
-    "Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
+    "### Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
 )
 
 st.markdown(
