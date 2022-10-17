@@ -87,7 +87,7 @@ cpd = (
     .sort_values(by=["order_month"])
 )
 
-fig, ax = plt.subplots(1, 1)
+fig, ax = plt.subplots(figsize=(10, 5))
 palette = ["brown", "#38d655"]
 lineplot = sns.lineplot(
     data=cpd,
@@ -98,8 +98,8 @@ lineplot = sns.lineplot(
     dashes=False,
     palette=palette,
 )
-ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color="orange")
-ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color="green")
+ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color='orange')
+ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color='green')
 
 ax.annotate("avg: 287", (12, 292))
 ax.annotate("avg: 160", (12, 165))
@@ -111,21 +111,22 @@ x_data = ax.get_lines()[0].get_xdata()
 y_data = ax.get_lines()[0].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-    label = f"{y_value:.0f}"
-    ax.annotate(label, (x_value, y_value))
+            label = f"{y_value:.0f}"
+            ax.annotate(label, (x_value, y_value))
 
 x_data = ax.get_lines()[1].get_xdata()
 y_data = ax.get_lines()[1].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-    label = f"{y_value:.0f}"
-    ax.annotate(label, (x_value, y_value))
+            label = f"{y_value:.0f}"
+            ax.annotate(label, (x_value, y_value))
 
-ax.spines["top"].set_visible(False)
-ax.spines["right"].set_visible(False)
-ax.spines["left"].set_visible(False)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
 frame = plt.gca()
 frame.axes.get_yaxis().set_visible(False)
+frame.grid(True)
 
 col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
@@ -138,8 +139,13 @@ with col2:
 st.write(
     """
     Berdasarkan grafik di atas, dapat dilihat bahwa trend jumlah hoaks mengalami
-    penurunan. Rata-rata jumlah hoaks pada tahun 2020 sebesar 287 turun menjadi
-    160 di tahun berikutnya.
+    penurunan. Pada tahun 2020 tercatat total 3.447 total hoaks dengan rata-
+    rata 287 hoaks/bulan. Jumlah hoaks tertinggi terdapat pada bulan Maret
+    dengan total 360 hoaks dan terendah terdapat pada bulan November dan Desember
+    dengan total 193 hoaks. Pada tahun 2021 tercatat total 1.921 total hoaks
+    dengan rata-rata 160 hoaks/bulan. Jumlah hoaks tertinggi terdapat pada bulan
+    Januari dengan total 228 hoaks dan terendah terdapat pada bulan September
+    dengan total 193 hoaks
     """
 )
 
