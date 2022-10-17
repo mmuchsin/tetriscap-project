@@ -319,10 +319,34 @@ with col1:
         alpha=0.9
     )
 
-
+    ax.set_title("Indeks Literasi Digital di 34 Provinsi 2020")
     ax.bar_label(ax.containers[0], padding=1)
 
     ax.vlines(np.average(lp20.indeks_literasi_digital), ymin=-1, ymax=34, color='grey', linestyles='dashed')
+    ax.annotate("indeks nasional: 3.46", (3.46, -1.5))
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    st.pyplot(fig)
+
+
+with col2:
+    lp21 = data_cleaner.get_literasi_prov21_clean()
+    colors = sns.color_palette("Blues_r", n_colors=34)
+    fig, ax = plt.subplots(figsize=(8, 10))
+    bar = sns.barplot(
+        data=lp21.sort_values("indeks_literasi_digital", ascending=False),
+        x="indeks_literasi_digital",
+        y="provinsi",
+        palette=colors,
+        alpha=0.9
+    )
+
+    ax.set_title("Indeks Literasi Digital di 34 Provinsi 2021")
+    ax.bar_label(ax.containers[0], padding=1)
+
+    ax.vlines(np.average(lp21.indeks_literasi_digital), ymin=-1, ymax=34, color='grey', linestyles='dashed')
     ax.annotate("indeks nasional: 3.46", (3.46, -1.5))
 
     ax.spines['top'].set_visible(False)
