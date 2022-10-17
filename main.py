@@ -42,6 +42,23 @@ st.markdown(
     """
 )
 
+# Latar Belakang
+st.subheader("Latar Belakang")
+
+st.markdown(
+    """
+    Perkembangan teknologi berkontribusi besar terhadap perkembangan media,
+    khususnya media digital. Ditambah dengan adanya pandemi Covid-19 yang memicu
+    terwujudnya new normal. Kebutuhan masyarakat akan informasi yang aktual dan
+    faktual meningkat secara signifikan. Akan tetapi, seringkali berita yang
+    disajikan media online tidak lagi melalui proses penyuntingan yang ketat
+    sehingga kebenaran informasi yang disajikan pun tidak dapat dipastikan.
+    Bahkan, beberapa pihak, dengan sengaja menyebarkan berita hoaks untuk meraup
+    keuntungan.
+    """
+)
+
+
 # Hoaks di Indonesia
 st.subheader("Hoaks di Indonesia")
 
@@ -91,7 +108,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-col1, col2 = st.columns(2, gap="medium")
+col1, col2, col3 = st.columns(3, gap="medium")
 literasi = data_cleaner.literasi_only()
 literasi_mod = literasi.copy()
 literasi_mod["tahun"] = literasi_mod["tahun"].apply(str)
