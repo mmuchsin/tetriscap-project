@@ -52,7 +52,7 @@ st.markdown(
     terwujudnya new normal. Kebutuhan masyarakat akan informasi yang aktual dan
     faktual meningkat secara signifikan. Akan tetapi, seringkali berita yang
     disajikan media digital tidak lagi melalui proses penyuntingan yang ketat
-    sehingga kebenaran informasi yang disajikan pun tidak dapat dipastikan.
+    sehingga kebenaran informasi yang disajikan pun sulit untuk dipastikan.
     Bahkan, beberapa pihak, dengan sengaja menyebarkan hoaks untuk meraup
     keuntungan.
     Menurut Rifda Amrullah (2020) Penyebaran hoaks di Indonesia dinilai
