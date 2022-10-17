@@ -90,7 +90,7 @@ cpd = (
 )
 
 fig, ax = plt.subplots(1, 1)
-palette = ["b", "g"]
+palette = ["brown", "#38d655"]
 lineplot = sns.lineplot(
     data=cpd,
     x="month",
@@ -100,8 +100,34 @@ lineplot = sns.lineplot(
     dashes=False,
     palette=palette,
 )
+ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color='orange')
+ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color='green')
+
+ax.annotate("avg: 287", (12, 292))
+ax.annotate("avg: 160", (12, 165))
+
 ax.set_title("Trend Jumlah Hoaks 2020-2021")
 plt.xticks(rotation=30)
+
+x_data = ax.get_lines()[0].get_xdata()
+y_data = ax.get_lines()[0].get_ydata()
+
+for x_value, y_value in zip(x_data, y_data):
+            label = f"{y_value:.0f}"
+            ax.annotate(label, (x_value, y_value))
+
+x_data = ax.get_lines()[1].get_xdata()
+y_data = ax.get_lines()[1].get_ydata()
+
+for x_value, y_value in zip(x_data, y_data):
+            label = f"{y_value:.0f}"
+            ax.annotate(label, (x_value, y_value))
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
+frame = plt.gca()
+frame.axes.get_yaxis().set_visible(False)
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
