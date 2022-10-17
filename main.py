@@ -309,7 +309,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     lp20 = data_cleaner.get_literasi_prov20_clean()
-    colors = sns.color_palette("Greens_r", n_colors=34)
+    colors = sns.color_palette("BLues_r", n_colors=34)
     fig, ax = plt.subplots(figsize=(8, 10))
     bar = sns.barplot(
         data=lp20.sort_values("indeks_literasi_digital", ascending=False),
@@ -333,7 +333,7 @@ with col1:
 
 with col2:
     lp21 = data_cleaner.get_literasi_prov21_clean()
-    colors = sns.color_palette("Blues_r", n_colors=34)
+    colors = sns.color_palette("Greens_r", n_colors=34)
     fig, ax = plt.subplots(figsize=(8, 10))
     bar = sns.barplot(
         data=lp21.sort_values("indeks_literasi_digital", ascending=False),
@@ -347,7 +347,7 @@ with col2:
     ax.bar_label(ax.containers[0], padding=1)
 
     ax.vlines(np.average(lp21.indeks_literasi_digital), ymin=-1, ymax=34, color='grey', linestyles='dashed')
-    ax.annotate("indeks nasional: 3.46", (3.46, -1.5))
+    ax.annotate("indeks nasional: 3.49", (3.46, -1.5))
 
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -368,16 +368,6 @@ st.write(
 
 
         """
-)
-
-# Solusi
-st.subheader("Solusi")
-
-st.write(
-    """
-    - Meningkatkan kemampuan literasi digital
-    - Aplikasi pendeteksi hoaks
-    """
 )
 
 
