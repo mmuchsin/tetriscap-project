@@ -103,12 +103,10 @@ lineplot = sns.lineplot(
 )
 plt.xticks(rotation=30)
 
-# for item, color in zip(cpd.groupby("total"), palette):
-#     # item[1] is a grouped data frame
-#     for x, y, m in item[1][["x", "y", "mark_value"]].values:
-#         ax.text(x, y, f"{m:.2f}", color=color)
-st.pyplot(fig)
-st.markdown(
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.pyplot(fig)
+    st.markdown(
     """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
     unsafe_allow_html=True,
 )
