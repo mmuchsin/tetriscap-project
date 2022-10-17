@@ -184,7 +184,7 @@ with col2:
     df = data_loader.get_bentuk_hoaks()
     colors = sns.color_palette("flare_r", n_colors=7)
 
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots()
     bar = sns.barplot(
     x='bentuk',
     y='persentase',
