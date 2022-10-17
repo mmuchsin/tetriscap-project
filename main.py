@@ -22,7 +22,7 @@ st.write(
 
 st.write(
     """
-    by M Muchsin
+    by Muchsin
     """
 )
 
@@ -31,11 +31,13 @@ st.subheader("Ringkasan Eksekutif")
 
 st.markdown(
     """
-    Indeks Literasi Digital Indonesia padat tahun 2020 dan 2021 masih berada
-    pada level “sedang” dengan skor 3,46 dan 3,49. Dari 34 provinsi di Indonesia,
-    DI Yogyakarta memiliki Indeks Literasi Digital tertinggi tahun 2021, skor
-    3,71 (dari skala 1-5). Sementara itu, Maluku Utara merupakan provinsi dengan
-    skor indeks terendah, yaitu 3,18.
+    Literasi Digital di Indonesia belum sampai level “baik”. Jika skor indeks
+    tertinggi adalah 5, indeks literasi digital Indonesia baru berada sedikit di
+    atas angka 3. Lebih tepatnya Indeks Literasi Digital Indonesia pada tahun
+    2020 dan 2021 masih berada pada level “sedang” dengan skor 3,46 dan 3,49.
+    Dari 34 provinsi di Indonesia, DI Yogyakarta memiliki Indeks Literasi Digital
+    tertinggi tahun 2021, skor 3,71 (dari skala 1-5). Sementara itu, Maluku Utara
+    merupakan provinsi dengan skor indeks terendah, yaitu 3,18.
 
     """
 )
@@ -117,51 +119,60 @@ st.markdown(
 
 
 # Korelasi
-st.subheader("Korelasi")
+st.subheader("Hoaks vs Literasi Digital")
 
-col1, col2 = st.columns([2, 3], gap="large")
+st.write(
+    """
+    Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital
+    sebesar -1. Dengan kata lain, hubungan antara hoaks dan literasi digital
+    berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun,
+    begitu juga sebaliknya.
+    """
+)
 
-with col1:
-    st.markdown(
-        """<div style='text-align: center'> Tabel Indeks Literasi Digital
-                dan Jumlah Hoaks Per Tahun</div>""",
-        unsafe_allow_html=True,
-    )
-    corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
-    st.dataframe(corr_data, use_container_width=True)
+# col1, col2 = st.columns([2, 3], gap="large")
 
-with col2:
-    st.write(
-        """
-        Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
-        literasidigital sebesar 3,46 dengan total hoaks yang tercatat di web
-        kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
-        literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
-        kominfo selama 7 bulan sebanyak 1.115 hoaks.
+# with col1:
+#     st.markdown(
+#         """<div style='text-align: center'> Tabel Indeks Literasi Digital
+#                 dan Jumlah Hoaks Per Tahun</div>""",
+#         unsafe_allow_html=True,
+#     )
+#     corr_data = data_cleaner.get_corr_data(literasi, kominfo_tahunan)
+#     st.dataframe(corr_data, use_container_width=True)
 
-        """
-    )
+# with col2:
+#     st.write(
+#         """
+#         Dari tabel disamping dapat diketahui bahwa pada tahun 2020, skor indeks
+#         literasidigital sebesar 3,46 dengan total hoaks yang tercatat di web
+#         kominfo sebanyak 3.337 hoaks. Sedangkan pada tahun 2020, skor indeks
+#         literasidigital sebesar 3,49 dengan total hoaks yang tercatat di web
+#         kominfo selama 7 bulan sebanyak 1.115 hoaks.
 
-col1, col2 = st.columns([2, 3], gap="large")
+#         """
+#     )
 
-with col1:
-    st.markdown(
-        """<div style='text-align: center'> Heatmap Korelasi Indeks Digital
-                Literasi dengan Jumlah Hoaks</div>""",
-        unsafe_allow_html=True,
-    )
-    corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
-    # st.dataframe(corr_table, use_container_width=True)
-    fig = px.imshow(corr_table, text_auto=True)
-    st.plotly_chart(fig, use_container_width=True)
+# col1, col2 = st.columns([2, 3], gap="large")
 
-with col2:
-    st.write(
-        """
-        Dari tampilan heatmap di samping, kita dapat mengetahui bahwa indeks literasi
-        digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
-        """
-    )
+# with col1:
+#     st.markdown(
+#         """<div style='text-align: center'> Heatmap Korelasi Indeks Digital
+#                 Literasi dengan Jumlah Hoaks</div>""",
+#         unsafe_allow_html=True,
+#     )
+#     corr_table = corr_data[["indeks_literasi_digital", "total_hoax"]].corr()
+#     # st.dataframe(corr_table, use_container_width=True)
+#     fig = px.imshow(corr_table, text_auto=True)
+#     st.plotly_chart(fig, use_container_width=True)
+
+# with col2:
+#     st.write(
+#         """
+#         Dari tampilan heatmap di samping, kita dapat mengetahui bahwa indeks literasi
+#         digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
+#         """
+#     )
 
 
 # Kesimpulan
