@@ -74,3 +74,16 @@ def get_isi_hoaks():
     }
     df = pd.DataFrame(data)
     return df
+
+def get_literasi_prov20():
+    df = pd.read_excel(
+        DATA_DIR.joinpath("literasi_prov_2020.xlsx"),
+        heet_name="Sheet2"
+    )
+    return df
+
+def get_literasi_prov21():
+    df = pd.read_excel(
+        DATA_DIR.joinpath("literasi_prov_2021.xlsx")
+    )
+    return df
