@@ -54,7 +54,7 @@ def get_bentuk_hoaks():
     return df
 
 
-def get_isi_hoax():
+def get_isi_hoaks():
     data = {
         "topik": [
             "info pekerjaan",
