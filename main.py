@@ -13,9 +13,7 @@ st.set_page_config(
 
 st.image("./src/images/hoax.png")
 
-st.markdown(
-    "# Hoaks dimana-mana, Literasi Digital di Indonesia Separah itu kah?"
-)
+st.markdown("# Hoaks dimana-mana, Literasi Digital di Indonesia Separah itu kah?")
 st.write(
     "### Analisis Literasi Digital Indonesia Ditinjau dari Penyebaran Hoaks Tahun 2020-2021"
 )
@@ -100,8 +98,8 @@ lineplot = sns.lineplot(
     dashes=False,
     palette=palette,
 )
-ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color='orange')
-ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color='green')
+ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color="orange")
+ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color="green")
 
 ax.annotate("avg: 287", (12, 292))
 ax.annotate("avg: 160", (12, 165))
@@ -113,19 +111,19 @@ x_data = ax.get_lines()[0].get_xdata()
 y_data = ax.get_lines()[0].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-            label = f"{y_value:.0f}"
-            ax.annotate(label, (x_value, y_value))
+    label = f"{y_value:.0f}"
+    ax.annotate(label, (x_value, y_value))
 
 x_data = ax.get_lines()[1].get_xdata()
 y_data = ax.get_lines()[1].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-            label = f"{y_value:.0f}"
-            ax.annotate(label, (x_value, y_value))
+    label = f"{y_value:.0f}"
+    ax.annotate(label, (x_value, y_value))
 
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
 frame = plt.gca()
 frame.axes.get_yaxis().set_visible(False)
 
@@ -133,11 +131,41 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.pyplot(fig)
     st.markdown(
-    """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
-    unsafe_allow_html=True,
+        """<div style='text-align: center'> Sumber data: kominfo dan turnbackhoax</div>""",
+        unsafe_allow_html=True,
+    )
+
+st.write(
+    """
+    Berdasarkan grafik di atas, dapat dilihat bahwa trend jumlah hoaks mengalami
+    penurunan. Rata-rata jumlah hoaks pada tahun 2020 sebesar 287 turun menjadi
+    160 di tahun berikutnya.
+    """
 )
 
-st.write("hoaks bulan juli kenapa  meningkat? kebanyakan hoaks tentang apa?")
+st.write(
+    """
+    Berdasarkan survey yang dilakukan oleh Mastel pada tahun 2019, rincian
+    penyebaran hoaks tersaji  dalam grafik berikut.
+    """
+)
+
+colors = sns.color_palette("Reds_r")[:3]
+for i in range(4):
+    colors.append("grey")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    data = data_loader.get_penyebaran_hoaks()
+    fig = plt.bar(
+        data.media,
+        data.persentase.sort_values(ascending=False),
+        color=colors,
+        alpha=0.8,
+    )
+    plt.xticks(rotation=30)
+    st.pyplot(fig)
 
 # Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
@@ -145,8 +173,8 @@ st.subheader("Literasi Digital di Indonesia")
 st.markdown(
     """<div style='text-align: center'> Indeks Literasi Digital
                 Indonesia Tahun 2020-2021</div>""",
-    unsafe_allow_html=True)
-
+    unsafe_allow_html=True,
+)
 
 
 # Korelasi
