@@ -160,7 +160,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     data = data_loader.get_penyebaran_hoaks()
-    colors = sns.color_palette("Reds_r")[:6]
+    colors = sns.color_palette("Reds_r")
 
     fig, ax = plt.subplots()
     bar = sns.barplot(
@@ -181,18 +181,20 @@ with col1:
     st.pyplot(fig)
 
 with col2:
-    data = data_loader.get_bentuk_hoaks()
-    colors = sns.color_palette("Reds_r")[:7]
+    df = get_bentuk_hoaks()
+    colors = sns.color_palette("flare_r", n_colors=7)
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 5))
     bar = sns.barplot(
-    x = data.bentuk,
-    y = data.persentase.sort_values(ascending=False),
+    x='bentuk',
+    y='persentase',
+    data=df.sort_values('persentase', ascending=False),
     palette=colors,
 
     )
     plt.xticks(rotation=30)
     ax.set_title("Ragam Bentuk Hoaks")
+    ax.set_ylim(0, 100)
 
     for b in ax.containers:
         ax.bar_label(b)
