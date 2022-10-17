@@ -160,18 +160,21 @@ colors = sns.color_palette("Reds_r")[:6]
 # for i in range(4):
 #     colors.append("grey")
 
-col1, col2, col3 = st.columns([1, 3, 1])
+col1, col2, col3 = st.columns(3)
 
-with col2:
+with col1:
     data = data_loader.get_penyebaran_hoaks()
-    fig, ax = plt.subplots(1, 1)
-    ax = plt.bar(
-    data.media,
-    data.persentase.sort_values(ascending=False),
-    color=colors,
-    alpha=0.8,
-)
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x = data.media,
+    y = data.persentase.sort_values(ascending=False),
+    palette=colors,
+    )
     plt.xticks(rotation=30)
+    ax.set_title("Saluran Penyebaran Hoaks")
+    ax.bar_label(bars)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
     st.pyplot(fig)
 
 st.markdown(
