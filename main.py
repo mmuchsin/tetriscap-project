@@ -127,7 +127,7 @@ ax.spines["left"].set_visible(False)
 frame = plt.gca()
 frame.axes.get_yaxis().set_visible(False)
 
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
     st.pyplot(fig)
     st.markdown(
