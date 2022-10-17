@@ -308,7 +308,28 @@ st.write(
 col1, col2 = st.columns(2)
 
 with col1:
-    
+    lp20 = data_cleaner.get_literasi_prov20_clean()
+    colors = sns.color_palette("Greens_r", n_colors=34)
+    fig, ax = plt.subplots(figsize=(8, 10))
+    bar = sns.barplot(
+        data=lp20.sort_values("indeks_literasi_digital", ascending=False),
+        x="indeks_literasi_digital",
+        y="provinsi",
+        palette=colors,
+        alpha=0.9
+    )
+
+
+    ax.bar_label(ax.containers[0], padding=1)
+
+    ax.vlines(np.average(lp20.indeks_literasi_digital), ymin=-1, ymax=34, color='grey', linestyles='dashed')
+    ax.annotate("indeks nasional: 3.46", (3.46, -1.5))
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    st.pyplot(fig)
+
 # Penutup
 st.subheader("Penutup")
 
