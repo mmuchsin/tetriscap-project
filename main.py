@@ -235,7 +235,7 @@ with col1:
     df = data_loader.get_isi_hoaks()
     colors = sns.color_palette("Oranges_r", n_colors=12)
 
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots(figsize=(13, 5))
     bar = sns.barplot(
     x="topik",
     y="persentase",
