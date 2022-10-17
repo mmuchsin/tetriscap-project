@@ -121,7 +121,7 @@ st.subheader("Literasi Digital di Indonesia")
 st.markdown(
     """<div style='text-align: center'> Indeks Literasi Digital
                 Indonesia Tahun 2020-2021</div>""",
-    unsafe_allow_html=True,
+    unsafe_allow_html=True)
 
 
 
