@@ -297,8 +297,9 @@ st.subheader("Hoaks vs Literasi Digital")
 
 st.write(
     """
-    Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital
-    sebesar -1. Dengan kata lain, hubungan antara hoaks dan literasi digital
+    >Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital
+    sebesar -1.
+    Dengan kata lain, hubungan antara hoaks dan literasi digital
     berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun,
     begitu juga sebaliknya.
     """
@@ -343,7 +344,6 @@ st.markdown(
     - Kominfo. [*Informasi Publik Setiap Saat*.](https://eppid.kominfo.go.id/informasi_publik/Informasi%20Publik%20Setiap%20Saat)
     - Kontributor Wikipedia, [*Literasi digital*](https://id.wikipedia.org/w/index.php?title=Literasi_digital&oldid=21764697), Wikipedia, Ensiklopedia Bebas, (diakses pada Oktober 9, 2022).
     - Mastel. [*Hasil Survey Wabah HOAX Nasional 2019*](https://mastel.id/hasil-survey-wabah-hoax-nasional-2019/)
-    - Vanya Karunia Mulia Putri. 2021. [*Literasi Digital: Pengertian, Prinsip, Manfaat, Tantangan dan Contoh*.](https://www.kompas.com/skola/read/2021/06/15/142539669/literasi-digital-pengertian-prinsip-manfaat-tantangan-dan-contoh)
     - Vika Azkiya Dihni. 2022. [*Indeks Literasi Digital Indonesia Membaik pada 2021*.](https://databoks.katadata.co.id/datapublish/2022/07/13/indeks-literasi-digital-indonesia-membaik-pada-2021)
     """
 )
