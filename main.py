@@ -328,7 +328,7 @@ with col1:
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig)
 
 
 with col2:
@@ -352,7 +352,7 @@ with col2:
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig)
 
 # Penutup
 st.subheader("Penutup")
