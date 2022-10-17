@@ -25,10 +25,10 @@ def get_combine():
 def get_penyebaran_hoaks():
     data = {
         "media": [
-            "sosial_media",
-            "aplikasi_chatting",
+            "sosial media",
+            "aplikasi chatting",
             "website",
-            "media_cetak",
+            "media cetak",
             "email",
             "tv"
         ],
@@ -43,7 +43,7 @@ def get_bentuk_hoaks():
             "tulisan",
             "foto editan",
             "foto caption palsu",
-            "video dubbinf palsu",
+            "video dubbing palsu",
             "video dipotong",
             "video caption palsu",
             "repost"
