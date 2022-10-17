@@ -182,6 +182,46 @@ with col1:
 
     st.pyplot(fig)
 
+with col2:
+    data = data_loader.get_bentuk_hoaks()
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x = data.bentuk,
+    y = data.persentase.sort_values(ascending=False),
+    palette=colors,
+
+    )
+    plt.xticks(rotation=30)
+    ax.set_title("Ragam Bentuk Hoaks")
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    st.pyplot(fig)
+
+with col3:
+    data = data_loader.get_isi_hoax()
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x = data.topik,
+    y = data.persentase.sort_values(ascending=False),
+    palette=colors,
+
+    )
+    plt.xticks(rotation=30)
+    ax.set_title("Ragam Isi Hoaks")
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    st.pyplot(fig)
+
 st.markdown(
         """<div style='text-align: center'> Sumber data: mastel</div>""",
         unsafe_allow_html=True,
