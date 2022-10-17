@@ -259,7 +259,7 @@ with col2:
     st.write(
     """
     Dilihat dari sudut pandang isi, mayoritas isi hoaks didominasi oleh
-    isu sosial politik, sara dan pemerintah
+    isu sosial politik, sara dan pemerintahan.
     """
     )
 
