@@ -156,14 +156,12 @@ st.write(
     """
 )
 
-colors = sns.color_palette("Reds_r")[:6]
-# for i in range(4):
-#     colors.append("grey")
-
 col1, col2, col3 = st.columns(3)
 
 with col1:
     data = data_loader.get_penyebaran_hoaks()
+    colors = sns.color_palette("Reds_r")[:6]
+
     fig, ax = plt.subplots()
     bar = sns.barplot(
     x = data.media,
@@ -184,6 +182,8 @@ with col1:
 
 with col2:
     data = data_loader.get_bentuk_hoaks()
+    colors = sns.color_palette("Reds_r")[:7]
+
     fig, ax = plt.subplots()
     bar = sns.barplot(
     x = data.bentuk,
@@ -204,6 +204,8 @@ with col2:
 
 with col3:
     data = data_loader.get_isi_hoax()
+    colors = sns.color_palette("Reds_r")[:10]
+
     fig, ax = plt.subplots()
     bar = sns.barplot(
     x = data.topik,
