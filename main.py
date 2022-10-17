@@ -281,7 +281,9 @@ st.write(
     kegunaannya dalam rangka membina komunikasi dan interaksi dalam kehidupan
     sehari-hari. Pada intinya literasi digital merupakan **skill dan pengetahuan**
     untuk **menggunakan dan memanfaatkan** digital tools untuk mencapai suatu
-    hal.
+    hal. Untuk mengukur tingkat digital literasi membutuhkan framework khusus
+    yaitu indeks literasi digital. Indeks literasi digital memiliki rentang
+    skor 0-5 dengan kategori baik (5-4), sedang (4-2) dan buruk (2-0).
     """
 )
 
@@ -338,6 +340,30 @@ st.markdown(
     """<div style='text-align: center'> Sumber data: katadata</div>""",
     unsafe_allow_html=True,
 )
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.write(
+    """
+    Pada tahun 2020 skor Indeks Literasi Digital per provinsi ada di rentang 4,06
+    hingga 3,11. Skor tertinggi dimiliki oleh Provinsi Sulawesi Tengah (4,06) dan
+    skor terendah dimiliki oleh Provinsi Jawa Timur (3,17). Sementara itu,
+    DKI Jakarta sebagai ibu kota negara memiliki skor Indeks Literasi Digital
+    3,26 atau dibawah rata-rata nasional (3,46).
+    """
+    )
+
+with col2:
+    st.write(
+    """
+    Secara umum, skor Indeks Literasi Digital per provinsi ada di rentang 3,71
+    hingga 3,18. Skor tertinggi dimiliki oleh Provinsi DI Yogyakarta (3,71) dan
+    skor terendah dimiliki oleh Provinsi Maluku Utara (3,18). Sementara itu,
+    DKI Jakarta sebagai ibu kota negara memiliki skor Indeks Literasi Digital
+    3,51 atau sedikit diatas rata-rata nasional (3,49).
+    """
+    )
 
 
 # Korelasi
