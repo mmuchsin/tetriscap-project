@@ -229,7 +229,7 @@ with col3:
 
     st.pyplot(fig)
 
-col1, col2, = st.columns([2, 1])
+col1, col2, = st.columns([1, 2])
 
 with col1:
     data = data_loader.get_penyebaran_hoaks()
