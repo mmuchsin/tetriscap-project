@@ -42,8 +42,8 @@ st.markdown(
     """
 )
 
-# Latar Belakang
-st.subheader("Latar Belakang")
+# Pendahuluan
+st.subheader("Pendahuluan")
 
 st.markdown(
     """
