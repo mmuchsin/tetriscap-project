@@ -103,7 +103,7 @@ lineplot = sns.lineplot(
 )
 plt.xticks(rotation=30)
 
-col1, col2, col3 = st.columns(3, [1, 2, 1])
+col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.pyplot(fig)
     st.markdown(
