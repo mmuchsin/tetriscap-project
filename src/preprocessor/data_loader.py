@@ -40,7 +40,7 @@ def get_penyebaran_hoaks():
 def get_bentuk_hoaks():
     data = {
         "bentuk": [
-            "tulisan,
+            "tulisan",
             "foto editan",
             "foto caption palsu",
             "video dubbinf palsu",
