@@ -233,7 +233,7 @@ col1, col2, = st.columns(2)
 
 with col1:
     df = data_loader.get_isi_hoaks()
-    colors = sns.color_palette("Oranges_r", n_colors=10)
+    colors = sns.color_palette("Oranges_r", n_colors=13)
 
     fig, ax = plt.subplots(figsize=(10, 5))
     bar = sns.barplot(
