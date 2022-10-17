@@ -195,7 +195,14 @@ st.write("")
 col1, col2, = st.columns(2)
 
 with col1:
-    st.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    st.write(
+    """
+    Beralih ke ragam bentuk hoaks yang sering diterima. Dapat dilihat bahwa
+    Tiga ragam bentuk hoax yang sering diterima adalah: tulisan (70,7%), foto
+    dengan caption palsu (66,3%) dan repost atau berita/foto/video lama diposting
+    ulang (69,2%)
+    """
+    )
 
 with col2:
     df = data_loader.get_bentuk_hoaks()
