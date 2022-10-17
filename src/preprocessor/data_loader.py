@@ -21,3 +21,54 @@ def get_kominfo():
 def get_combine():
     combine = pd.read_csv(DATA_DIR.joinpath("combine.csv"))
     return combine
+
+def get_penyebaran_hoaks():
+    data = {
+        "media": [
+            "sosial_media",
+            "aplikasi_chatting",
+            "website",
+            "media_cetak",
+            "email",
+            "tv"
+        ],
+        "persentase": [87.5, 67, 28.2, 6.4, 2.6, 8.1]
+    }
+    df = pd.DataFrame(data)
+    return df
+
+def get_bentuk_hoaks():
+    data = {
+        "bentuk": [
+            "tulisan,
+            "foto editan",
+            "foto caption palsu",
+            "video dubbinf palsu",
+            "video dipotong",
+            "video caption palsu",
+            "repost"
+        ],
+        "persentase": [70.7, 57.8, 66.3, 33.2, 45.7, 53.2, 69.2]
+    }
+    df = pd.DataFrame(data)
+    return df
+
+
+def get_isi_hoax():
+    data = {
+        "topik": [
+            "info pekerjaan",
+            "kecelakaan lalu lintas",
+            "sosial budaya",
+            "berita duka",
+            "iptek",
+            "penipuan keuangan",
+            "makanan & minumam",
+            "kesehatan",
+            "pemerintahan",
+            "sara"
+        ],
+        "persentase": [24.4, 13.5, 18.1, 16.8, 20, 18.5, 30, 40.7, 61.7, 93.2]
+    }
+    df = pd.DataFrame(data)
+    return df
