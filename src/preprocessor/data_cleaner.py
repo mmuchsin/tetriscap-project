@@ -75,3 +75,17 @@ def get_corr_data(df1, df2):
 
     combine = pd.merge(df1, data, how="inner", on="tahun")
     return combine
+
+
+def get_literasi_prov20_clean():
+    df = data_loader.get_literasi_prov20()
+    df.drop(columns=["Unnamed: 0"])
+    df["tahun"] = 2020
+    retun df
+
+
+def get_literasi_prov21_clean():
+    df = data_loader.get_literasi_prov21()
+    df.drop(columns=["Unnamed: 0"])
+    df["tahun"] = 2021
+    retun df
