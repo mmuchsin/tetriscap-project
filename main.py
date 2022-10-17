@@ -171,6 +171,7 @@ with col1:
     )
     plt.xticks(rotation=30)
     ax.set_title("Saluran Penyebaran Hoaks")
+    ax.set_ylim(0, 100)
 
     for b in ax.containers:
         ax.bar_label(b)
@@ -182,13 +183,13 @@ with col1:
 
 with col2:
     df = data_loader.get_bentuk_hoaks()
-    colors = sns.color_palette("flare_r", n_colors=7)
+    colors = sns.color_palette("Purples_r", n_colors=7)
 
     fig, ax = plt.subplots()
     bar = sns.barplot(
-    x='bentuk',
-    y='persentase',
-    data=df.sort_values('persentase', ascending=False),
+    x="bentuk",
+    y="persentase",
+    data=df.sort_values("persentase", ascending=False),
     palette=colors,
 
     )
@@ -199,30 +200,32 @@ with col2:
     for b in ax.containers:
         ax.bar_label(b)
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
 with col3:
-    data = data_loader.get_isi_hoax()
-    colors = sns.color_palette("Reds_r")[:10]
+    df = data_loader.get_isi_hoaks()
+    colors = sns.color_palette("Oranges_r", n_colors=10)
 
     fig, ax = plt.subplots()
     bar = sns.barplot(
-    x = data.topik,
-    y = data.persentase.sort_values(ascending=False),
+    x="topik",
+    y="persentase",
+    data=df.sort_values("persentase", ascending=False),
     palette=colors,
 
     )
     plt.xticks(rotation=30)
-    ax.set_title("Ragam Isi Hoaks")
+    ax.set_title("Ragam Bentuk Hoaks")
+    ax.set_ylim(0, 100)
 
     for b in ax.containers:
         ax.bar_label(b)
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
