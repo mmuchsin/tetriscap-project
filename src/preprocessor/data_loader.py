@@ -61,14 +61,14 @@ def get_isi_hoaks():
             "kecelakaan lalu lintas",
             "bencana alam",
             "sosial budaya",
-            "candaan",
             "berita duka",
             "iptek",
             "penipuan keuangan",
             "makanan & minumam",
             "kesehatan",
             "pemerintahan",
-            "sara"
+            "sara",
+            "sosial politik"
         ],
         "persentase": [24.4, 13.5, 29.3, 18.1, 16.8, 20, 18.5, 30, 40.7, 61.7, 76.2, 93.2]
     }
