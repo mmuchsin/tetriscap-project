@@ -279,7 +279,9 @@ st.write(
     menemukan, mengevaluasi, menggunakan, membuat informasi, dan memanfaatkannya
     secara sehat, bijak, cerdas, cermat, tepat, dan patuh hukum sesuai dengan
     kegunaannya dalam rangka membina komunikasi dan interaksi dalam kehidupan
-    sehari-hari.
+    sehari-hari. Pada intinya literasi digital merupakan **skill dan pengetahuan**
+    untuk **menggunakan dan memanfaatkan** digital tools untuk mencapai suatu
+    hal.
     """
 )
 
