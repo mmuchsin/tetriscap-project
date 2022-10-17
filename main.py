@@ -227,6 +227,7 @@ st.markdown(
     - Diskominfo Bandung. 2022. [*Pengertian Hoax dan Cara Menangkalnya*.](https://diskominfo.badungkab.go.id/artikel/42985-pengertian-hoax-dan-cara-menangkalnya#:~:text=Hoax%20merupakan%20informasi%2C%20kabar%2C%20berita,diartikan%20sebagai%20berita%20yang%20bohong)
     - Fauzan Jamaludin. 2017. [*Rendahnya literasi digital jadi penyebab penyebaran berita hoax*.](https://www.merdeka.com/teknologi/rendahnya-literasi-digital-jadi-penyebab-penyebaran-berita-hoax.html)
     - Kominfo. [*Informasi Publik Setiap Saat*.](https://eppid.kominfo.go.id/informasi_publik/Informasi%20Publik%20Setiap%20Saat)
+    - Mastel. [*Hasil Survey Wabah HOAX Nasional 2019*](https://mastel.id/hasil-survey-wabah-hoax-nasional-2019/)
     - Vanya Karunia Mulia Putri. 2021. [*Literasi Digital: Pengertian, Prinsip, Manfaat, Tantangan dan Contoh*.](https://www.kompas.com/skola/read/2021/06/15/142539669/literasi-digital-pengertian-prinsip-manfaat-tantangan-dan-contoh)
     - Vika Azkiya Dihni. 2022. [*Indeks Literasi Digital Indonesia Membaik pada 2021*.](https://databoks.katadata.co.id/datapublish/2022/07/13/indeks-literasi-digital-indonesia-membaik-pada-2021)
     """
