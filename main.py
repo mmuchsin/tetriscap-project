@@ -55,11 +55,11 @@ st.markdown(
     sehingga kebenaran informasi yang disajikan pun tidak dapat dipastikan.
     Bahkan, beberapa pihak, dengan sengaja menyebarkan hoaks untuk meraup
     keuntungan.
-    Penyebaran hoaks di Indonesia dinilai meresahkan sehingga diperlukan tindakan
-    serius untuk menekan angka penyebaran hoaks. Namun masih banyak masyarakat
-    yang secara tidak sadar menjadi sukarelawan dalam penyebaran hoaks. Sehingga
-    perlu adanya upaya peningkatan literasi media bagi masyarakat, khususnya
-    literasi digital.
+    Menurut Rifda Amrullah (2020) Penyebaran hoaks di Indonesia dinilai
+    meresahkan sehingga diperlukan tindakan serius untuk menekan angka
+    penyebaran hoaks. Namun masih banyak masyarakat yang secara tidak sadar
+    menjadi sukarelawan dalam penyebaran hoaks. Sehingga perlu adanya upaya
+    peningkatan literasi media bagi masyarakat, khususnya literasi digital.
 
     """
 )
@@ -67,6 +67,16 @@ st.markdown(
 
 # Hoaks di Indonesia
 st.subheader("Hoaks di Indonesia")
+
+st.markdown(
+    """
+    Menurut Kamus besar Bahasa Indonesia (KBBI) hoax diartikan sebagai informasi
+    bohong. Dijelaskan lebih lanjut oleh Diskominfo Bandung, hoaks yaitu informasi
+    yang dibuat-buat atau direkayasa untuk menutupi informasi yang sebenarnya.
+    Dengan kata lain, hoax diartikan sebagai upaya pemutarbalikan fakta menggunakan
+    informasi yang seolah-olah meyakinkan akan tetapi tidak dapat diverifikasi kebenarannya.
+    """
+)
 
 combine = data_loader.get_combine()
 cpd = (
@@ -154,8 +164,8 @@ st.write(
 )
 
 
-# Kesimpulan
-st.subheader("Kesimpulan")
+# Penutup
+st.subheader("Penutup")
 
 st.write(
     """
