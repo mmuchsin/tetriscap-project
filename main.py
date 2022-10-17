@@ -150,13 +150,13 @@ st.write(
     """
 )
 
-colors = sns.color_palette("Reds_r")[:3]
-for i in range(4):
-    colors.append("grey")
+colors = sns.color_palette("Reds_r")[:6]
+# for i in range(4):
+#     colors.append("grey")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1, 3, 1])
 
-with col1:
+with col2:
     data = data_loader.get_penyebaran_hoaks()
     fig, ax = plt.subplots(1, 1)
     ax = plt.bar(
