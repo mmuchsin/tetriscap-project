@@ -53,7 +53,7 @@ st.markdown(
     faktual meningkat secara signifikan. Akan tetapi, seringkali berita yang
     disajikan media online tidak lagi melalui proses penyuntingan yang ketat
     sehingga kebenaran informasi yang disajikan pun tidak dapat dipastikan.
-    Bahkan, beberapa pihak, dengan sengaja menyebarkan berita hoaks untuk meraup
+    Bahkan, beberapa pihak, dengan sengaja menyebarkan hoaks untuk meraup
     keuntungan.
     """
 )
