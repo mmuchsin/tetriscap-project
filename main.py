@@ -158,12 +158,13 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     data = data_loader.get_penyebaran_hoaks()
-    fig = plt.bar(
-        data.media,
-        data.persentase.sort_values(ascending=False),
-        color=colors,
-        alpha=0.8,
-    )
+    fig, ax = plt.subplots(1, 1)
+    ax = plt.bar(
+    data.media,
+    data.persentase.sort_values(ascending=False),
+    color=colors,
+    alpha=0.8,
+)
     plt.xticks(rotation=30)
     st.pyplot(fig)
 
