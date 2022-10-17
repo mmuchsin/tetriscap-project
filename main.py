@@ -229,6 +229,34 @@ with col3:
 
     st.pyplot(fig)
 
+col1, col2, = st.columns([2, 1])
+
+with col1:
+    data = data_loader.get_penyebaran_hoaks()
+    colors = sns.color_palette("Reds_r")
+
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x = data.media,
+    y = data.persentase.sort_values(ascending=False),
+    palette=colors,
+
+    )
+    plt.xticks(rotation=30)
+    ax.set_title("Saluran Penyebaran Hoaks")
+    ax.set_ylim(0, 100)
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    st.pyplot(fig)
+
+with col2:
+    st.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
 st.markdown(
         """<div style='text-align: center'> Sumber data: mastel</div>""",
         unsafe_allow_html=True,
