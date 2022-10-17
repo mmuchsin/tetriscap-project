@@ -244,7 +244,7 @@ with col1:
 
     )
     plt.xticks(rotation=30)
-    ax.set_xticklabels(df.topik, ha="right")
+    ax.set_xticklabels(df.sort_values("persentase", ascending=False).topik, ha="right")
     ax.set_title("Ragam Bentuk Hoaks")
     ax.set_ylim(0, 100)
 
