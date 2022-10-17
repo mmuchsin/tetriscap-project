@@ -168,6 +168,11 @@ with col1:
     plt.xticks(rotation=30)
     st.pyplot(fig)
 
+st.markdown(
+        """<div style='text-align: center'> Sumber data: mastel</div>""",
+        unsafe_allow_html=True,
+    )
+
 # Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
 
