@@ -257,6 +257,64 @@ with col1:
 with col2:
     st.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
+col1, col2, = st.columns(2)
+
+with col1:
+    st.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+with col2:
+    df = data_loader.get_bentuk_hoaks()
+    colors = sns.color_palette("Purples_r", n_colors=7)
+
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x="bentuk",
+    y="persentase",
+    data=df.sort_values("persentase", ascending=False),
+    palette=colors,
+
+    )
+    plt.xticks(rotation=30)
+    ax.set_title("Ragam Bentuk Hoaks")
+    ax.set_ylim(0, 100)
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    st.pyplot(fig)
+
+col1, col2, = st.columns(2)
+
+with col1:
+    df = data_loader.get_isi_hoaks()
+    colors = sns.color_palette("Oranges_r", n_colors=10)
+
+    fig, ax = plt.subplots()
+    bar = sns.barplot(
+    x="topik",
+    y="persentase",
+    data=df.sort_values("persentase", ascending=False),
+    palette=colors,
+
+    )
+    plt.xticks(rotation=30)
+    ax.set_title("Ragam Bentuk Hoaks")
+    ax.set_ylim(0, 100)
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    st.pyplot(fig)
+
+with col2:
+    st.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
 st.markdown(
         """<div style='text-align: center'> Sumber data: mastel</div>""",
         unsafe_allow_html=True,
