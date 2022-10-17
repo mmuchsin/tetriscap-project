@@ -169,12 +169,17 @@ with col1:
     x = data.media,
     y = data.persentase.sort_values(ascending=False),
     palette=colors,
+
     )
     plt.xticks(rotation=30)
     ax.set_title("Saluran Penyebaran Hoaks")
-    ax.bar_label(bars)
+
+    for b in ax.containers:
+        ax.bar_label(b)
+
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
+
     st.pyplot(fig)
 
 st.markdown(
