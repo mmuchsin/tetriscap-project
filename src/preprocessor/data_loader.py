@@ -59,7 +59,9 @@ def get_isi_hoaks():
         "topik": [
             "info pekerjaan",
             "kecelakaan lalu lintas",
+            "bencana alam",
             "sosial budaya",
+            "candaan",
             "berita duka",
             "iptek",
             "penipuan keuangan",
@@ -68,7 +70,7 @@ def get_isi_hoaks():
             "pemerintahan",
             "sara"
         ],
-        "persentase": [24.4, 13.5, 18.1, 16.8, 20, 18.5, 30, 40.7, 61.7, 93.2]
+        "persentase": [24.4, 13.5, 29.3, 18.1, 16.8, 20, 18.5, 30, 40.7, 61.7, 76.2, 93.2]
     }
     df = pd.DataFrame(data)
     return df
