@@ -107,9 +107,10 @@ try:
                     input_column.success(f"This news is valid.")
                     input_column.text(f"{int(result[prediction]*100)}% confidence")
                     input_column.progress(result[prediction])
-                input_column.error(f"This news is fake.")
-                input_column.text(f"{int(result[prediction]*100)}% confidence")
-                input_column.progress(result[prediction])
+                else:
+                    input_column.error(f"This news is fake.")
+                    input_column.text(f"{int(result[prediction]*100)}% confidence")
+                    input_column.progress(result[prediction])
 
                 for i in sorted[:5]:
                     reference_column.write(
