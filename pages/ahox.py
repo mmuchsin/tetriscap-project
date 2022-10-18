@@ -14,7 +14,7 @@ from src.preprocessor.scraper import scrape
 st.set_page_config(layout="wide")
 
 st.write("# Anti Hoax (Ahox)")
-st.write("aplikasi pendeteksi hoaks berbasis machine learning")
+st.write("aplikasi pendeteksi hoaks berbasis AI")
 
 model_checkpoint = "Rifky/indobert-hoax-classification"
 base_model_checkpoint = "indobenchmark/indobert-base-p1"
@@ -33,12 +33,11 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 input_column, reference_column = st.columns(2)
-input_column.write('# Fake News Detection AI')
 
 with st.spinner("Loading Model..."):
     model, base_model, tokenizer, data = load_model()
 
-user_input = input_column.text_input("Article url")
+user_input = input_column.text_input("News url")
 submit = input_column.button("submit")
 
 
