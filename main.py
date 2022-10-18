@@ -235,7 +235,7 @@ with col2:
     st.pyplot(fig)
 
 st.markdown(
-        """<div style='text-align: center'> Sumber data: mastel</div>""",
+        """<div style='text-align: center'> Sumber data: katadata</div>""",
         unsafe_allow_html=True,
     )
 
