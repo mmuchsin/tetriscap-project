@@ -93,22 +93,13 @@ try:
                     f"<small>Compute Finished in {int(time.time() - last_time)} seconds</small>",
                     unsafe_allow_html=True,
                 )
-                # prediction = np.argmax(result, axis=-1)
-                # if label[prediction] == "fake":
-                #     input_column.error(f"This news is {label[prediction]}.")
-                #     input_column.text(f"{int(result[prediction]*100)}% confidence")
-                #     input_column.progress(result[prediction])
-                # input_column.success(f"This news is {label[prediction]}.")
-                # input_column.text(f"{int(result[prediction]*100)}% confidence")
-                # input_column.progress(result[prediction])
-
                 prediction = np.argmax(result, axis=-1)
-                if label[prediction]:  # if label[prediction] == 1:
-                    input_column.success(f"This news is valid.")
+                if label[prediction]:  # 0 == valid 1 == "fake"
+                    input_column.error(f"This news is {label[prediction]}.")
                     input_column.text(f"{int(result[prediction]*100)}% confidence")
                     input_column.progress(result[prediction])
                 else:
-                    input_column.error(f"This news is fake.")
+                    input_column.success(f"This news is {label[prediction]}.")
                     input_column.text(f"{int(result[prediction]*100)}% confidence")
                     input_column.progress(result[prediction])
 
