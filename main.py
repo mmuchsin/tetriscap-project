@@ -360,15 +360,15 @@ st.subheader("Penutup")
 
 st.write(
     """
-        - Tingkat literasi digital di Indonesia belum bisa dikatakan tinggi.
-        Mengacu pada skor indeks literasi digital yang hanya berada sedikit
-        di atas 3 pada tahun 2020. Dan Hanya bertambah 0.03 poin di tahun 2021.
-        Walaupun demikian trend penyebaran hoaks secara umum menurun dari awal tahun
-        2020 sampai pertengahan 2021.
-        - indeks literasi digital dan penyebaran hoaks berkorelasi sangat kuat secara negatif.
-
-
-        """
+    Dari awal tahun 2020 sampai akhir tahun 2021 trend jumlah hoaks secara
+    umum mengalami penurunan, yang mana merupakan good news. Akan tetapi
+    indeks literasi digital masih dalam level sedang. Tentunya masih banyak ruang
+    untuk lebih merkembang kedepannya. Berbagai pelatihan online yang berkaitan
+    dapat menjadi solusi potensial. Walaupun masih ada tantangan berupa literacy
+    rate di Indonesia yang masih sangat rendah. Alternatif lain adalah memanfaatkan
+    perkembangan teknoligi artificial intellegence, untuk mengautomisasi
+    deteksi hoaks.
+    """
 )
 
 
@@ -382,7 +382,6 @@ st.markdown(
     - Fauzan Jamaludin. 2017. [*Rendahnya literasi digital jadi penyebab penyebaran berita hoax*.](https://www.merdeka.com/teknologi/rendahnya-literasi-digital-jadi-penyebab-penyebaran-berita-hoax.html)
     - Kominfo. [*Informasi Publik Setiap Saat*.](https://eppid.kominfo.go.id/informasi_publik/Informasi%20Publik%20Setiap%20Saat)
     - Kontributor Wikipedia, [*Literasi digital*](https://id.wikipedia.org/w/index.php?title=Literasi_digital&oldid=21764697), Wikipedia, Ensiklopedia Bebas, (diakses pada Oktober 9, 2022).
-    - Mastel. [*Hasil Survey Wabah HOAX Nasional 2019*](https://mastel.id/hasil-survey-wabah-hoax-nasional-2019/)
     - Vika Azkiya Dihni. 2022. [*Indeks Literasi Digital Indonesia Membaik pada 2021*.](https://databoks.katadata.co.id/datapublish/2022/07/13/indeks-literasi-digital-indonesia-membaik-pada-2021)
     """
 )
