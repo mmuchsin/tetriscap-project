@@ -21,16 +21,21 @@ base_model_checkpoint = "indobenchmark/indobert-base-p1"
 data_checkpoint = "Rifky/indonesian-hoax-news"
 label = {0: "valid", 1: "fake"}
 
+
 @st.cache(show_spinner=False, allow_output_mutation=True)
 def load_model():
-    model = AutoModelForSequenceClassification.from_pretrained(model_checkpoint, num_labels=2)
+    model = AutoModelForSequenceClassification.from_pretrained(
+        model_checkpoint, num_labels=2
+    )
     base_model = SentenceTransformer(base_model_checkpoint)
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint, fast=True)
     data = load_dataset(data_checkpoint, split="train")
     return model, base_model, tokenizer, data
 
+
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
+
 
 input_column, reference_column = st.columns(2)
 
@@ -48,7 +53,7 @@ if submit:
         title, text = scrape.title, scrape.text
 
     if text:
-        text = re.sub(r'\n', ' ', text)
+        text = re.sub(r"\n", " ", text)
 
         with st.spinner("Computing..."):
             token = text.split()
@@ -56,36 +61,47 @@ if submit:
 
             sequences = []
             for i in range(text_len // 512):
-                sequences.append(" ".join(token[i * 512: (i + 1) * 512]))
+                sequences.append(" ".join(token[i * 512 : (i + 1) * 512]))
             sequences.append(" ".join(token[text_len - (text_len % 512) : text_len]))
-            sequences = tokenizer(sequences, max_length=512, truncation=True, padding="max_length", return_tensors='pt')
+            sequences = tokenizer(
+                sequences,
+                max_length=512,
+                truncation=True,
+                padding="max_length",
+                return_tensors="pt",
+            )
 
             predictions = model(**sequences)[0].detach().numpy()
             result = [
                 np.sum([sigmoid(i[0]) for i in predictions]) / len(predictions),
-                np.sum([sigmoid(i[1]) for i in predictions]) / len(predictions)
+                np.sum([sigmoid(i[1]) for i in predictions]) / len(predictions),
             ]
 
-            print (f'\nresult: {result}')
+            print(f"\nresult: {result}")
 
             title_embeddings = base_model.encode(title)
             similarity_score = cosine_similarity(
-                [title_embeddings],
-                data["embeddings"]
+                [title_embeddings], data["embeddings"]
             ).flatten()
             sorted = np.argsort(similarity_score)[::-1].tolist()
 
-            input_column.markdown(f"<small>Compute Finished in {int(time.time() - last_time)} seconds</small>", unsafe_allow_html=True)
+            input_column.markdown(
+                f"<small>Compute Finished in {int(time.time() - last_time)} seconds</small>",
+                unsafe_allow_html=True,
+            )
             prediction = np.argmax(result, axis=-1)
             input_column.success(f"This news is {label[prediction]}.")
             input_column.text(f"{int(result[prediction]*100)}% confidence")
             input_column.progress(result[prediction])
 
             for i in sorted[:5]:
-                reference_column.write(f"""
+                reference_column.write(
+                    f"""
                 <small>{data["url"][i].split("/")[2]}</small>
                 <a href={data["url"][i]}><h5>{data["title"][i]}</h5></a>
-                """, unsafe_allow_html=True)
+                """,
+                    unsafe_allow_html=True,
+                )
 
 
 st.subheader("Referensi")
