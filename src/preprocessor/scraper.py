@@ -1,6 +1,6 @@
 from newspaper import Article
 
-def Scrap(url):
+def scrape(url):
     """Scrap article from url
 
     Args:

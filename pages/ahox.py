@@ -9,7 +9,7 @@ from transformers import AutoModelForSequenceClassification, AutoModel, AutoToke
 from sklearn.metrics.pairwise import cosine_similarity
 from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
-from Scraper import Scrap
+from src.preprocessor.scrapeer import scrapee
 
 st.set_page_config(layout="wide")
 
@@ -45,8 +45,8 @@ submit = input_column.button("submit")
 if submit:
     last_time = time.time()
     with st.spinner("Reading Article..."):
-        scrap = Scrap(user_input)
-        title, text = scrap.title, scrap.text
+        scrape = scrape(user_input)
+        title, text = scrape.title, scrape.text
 
     if text:
         text = re.sub(r'\n', ' ', text)
