@@ -188,10 +188,8 @@ with col1:
 with col2:
     st.write(
     """
-    Seperti yang kita tahu, bahwa 1 hoaks dapat tersebar melalui berbagai jenis media.
-    Dari grafik di samping dapat dilihat bahwa terdapat 10 saluran penyebaran
-    hoaks. Dengan presentasi tertinggi tersebar melalui facebook disusul
-    dengan aplikasi whatsapp.
+    Dari segi platform, dapat dilihat bahwa platform dengan persentase penyebaran
+    hoaks tertinggi adalah facebook disusul dengan aplikasi whatsapp dan youtube.
     """
     )
 
@@ -203,8 +201,9 @@ col1, col2, = st.columns(2)
 with col1:
     st.write(
     """
-    Dilihat dari sudut pandang isi, mayoritas isi hoaks didominasi oleh
-    isu sosial politik, sara dan pemerintahan.
+    Dilihat dari sudut pandang isi, konten politik sebagai isu yang paling banyak
+    mengandung hoaks atau informasi keliru. Disusul oleh konten kesehatan dan
+    agama.
     """
     )
 
