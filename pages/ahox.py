@@ -48,64 +48,64 @@ submit = input_column.button("submit")
 
 try:
     if submit:
-    last_time = time.time()
-    with st.spinner("Reading Article..."):
-        try:
-        scrape = scrape(user_input)
-        title, text = scrape.title, scrape.text
-        except:
-            st.error("Tidak dapat scrape artikel dari input url")
+        last_time = time.time()
+        with st.spinner("Reading Article..."):
+            try:
+            scrape = scrape(user_input)
+            title, text = scrape.title, scrape.text
+            except:
+                st.error("Tidak dapat scrape artikel dari input url")
 
-    if text:
-        text = re.sub(r"\n", " ", text)
+        if text:
+            text = re.sub(r"\n", " ", text)
 
-        with st.spinner("Computing..."):
-            token = text.split()
-            text_len = len(token)
+            with st.spinner("Computing..."):
+                token = text.split()
+                text_len = len(token)
 
-            sequences = []
-            for i in range(text_len // 512):
-                sequences.append(" ".join(token[i * 512 : (i + 1) * 512]))
-            sequences.append(" ".join(token[text_len - (text_len % 512) : text_len]))
-            sequences = tokenizer(
-                sequences,
-                max_length=512,
-                truncation=True,
-                padding="max_length",
-                return_tensors="pt",
-            )
+                sequences = []
+                for i in range(text_len // 512):
+                    sequences.append(" ".join(token[i * 512 : (i + 1) * 512]))
+                sequences.append(" ".join(token[text_len - (text_len % 512) : text_len]))
+                sequences = tokenizer(
+                    sequences,
+                    max_length=512,
+                    truncation=True,
+                    padding="max_length",
+                    return_tensors="pt",
+                )
 
-            predictions = model(**sequences)[0].detach().numpy()
-            result = [
-                np.sum([sigmoid(i[0]) for i in predictions]) / len(predictions),
-                np.sum([sigmoid(i[1]) for i in predictions]) / len(predictions),
-            ]
+                predictions = model(**sequences)[0].detach().numpy()
+                result = [
+                    np.sum([sigmoid(i[0]) for i in predictions]) / len(predictions),
+                    np.sum([sigmoid(i[1]) for i in predictions]) / len(predictions),
+                ]
 
-            print(f"\nresult: {result}")
+                print(f"\nresult: {result}")
 
-            title_embeddings = base_model.encode(title)
-            similarity_score = cosine_similarity(
-                [title_embeddings], data["embeddings"]
-            ).flatten()
-            sorted = np.argsort(similarity_score)[::-1].tolist()
+                title_embeddings = base_model.encode(title)
+                similarity_score = cosine_similarity(
+                    [title_embeddings], data["embeddings"]
+                ).flatten()
+                sorted = np.argsort(similarity_score)[::-1].tolist()
 
-            input_column.markdown(
-                f"<small>Compute Finished in {int(time.time() - last_time)} seconds</small>",
-                unsafe_allow_html=True,
-            )
-            prediction = np.argmax(result, axis=-1)
-            input_column.success(f"This news is {label[prediction]}.")
-            input_column.text(f"{int(result[prediction]*100)}% confidence")
-            input_column.progress(result[prediction])
-
-            for i in sorted[:5]:
-                reference_column.write(
-                    f"""
-                <small>{data["url"][i].split("/")[2]}</small>
-                <a href={data["url"][i]}><h5>{data["title"][i]}</h5></a>
-                """,
+                input_column.markdown(
+                    f"<small>Compute Finished in {int(time.time() - last_time)} seconds</small>",
                     unsafe_allow_html=True,
                 )
+                prediction = np.argmax(result, axis=-1)
+                input_column.success(f"This news is {label[prediction]}.")
+                input_column.text(f"{int(result[prediction]*100)}% confidence")
+                input_column.progress(result[prediction])
+
+                for i in sorted[:5]:
+                    reference_column.write(
+                        f"""
+                    <small>{data["url"][i].split("/")[2]}</small>
+                    <a href={data["url"][i]}><h5>{data["title"][i]}</h5></a>
+                    """,
+                        unsafe_allow_html=True,
+                    )
 except:
     st.error("Harap input new url")
 
