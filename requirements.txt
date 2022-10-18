@@ -1,3 +1,4 @@
+datasets
 dateparser
 newspaper3k
 pandas
