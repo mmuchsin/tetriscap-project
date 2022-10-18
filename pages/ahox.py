@@ -88,8 +88,7 @@ if submit:
                 """, unsafe_allow_html=True)
 
 
-st.subheader("Referensi")
-
+st.write(" ## Referensi")
 st.write(
     "Rifky Bujana Bisri. [FND: Fake News Detection AI](https://github.com/rifkybujana/FND)"
 )
