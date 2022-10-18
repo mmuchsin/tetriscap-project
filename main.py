@@ -159,17 +159,20 @@ st.write(
 col1, col2, = st.columns(2)
 
 with col1:
-    data = data_loader.get_penyebaran_hoaks()
-    colors = sns.color_palette("Reds_r")
+    data = data_cleaner.get_penyebaran_hoaks()
+    labels = data.groupby(["media", "tahun"])["persentase"].max().reset_index().media.unique()
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 5))
     bar = sns.barplot(
-    x = data.media,
-    y = data.persentase.sort_values(ascending=False),
-    palette=colors,
-
+        data=data.sort_values("persentase", ascending=False),
+        x="media",
+        y="persentase",
+        hue="tahun",
+        palette=["#f2493d", "#f57c73"],
     )
+
     plt.xticks(rotation=30)
+    ax.set_xticklabels(labels, ha="right")
     ax.set_title("Saluran Penyebaran Hoaks")
     ax.set_ylim(0, 100)
 
