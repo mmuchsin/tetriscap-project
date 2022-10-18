@@ -151,17 +151,17 @@ st.write(
 
 st.write(
     """
-    Berdasarkan survey yang dilakukan oleh Mastel pada tahun 2019, rincian
-    penyebaran hoaks tersaji  dalam grafik berikut.
+    Berdasarkan survey yang dilakukan oleh Tim Katadata, rincian penyebaran
+    hoaks tersaji  dalam grafik berikut.
     """
 )
 
-# salran penyebaran hoaks
+# saluran penyebaran hoaks
 col1, col2, = st.columns(2)
 
 with col1:
     data = data_cleaner.get_penyebaran_hoaks()
-    labels = data.groupby(["media", "tahun"])["persentase"].max().reset_index().media.unique()
+    labels = data.sort_values("persentase", ascending=False).media.unique()
 
     fig, ax = plt.subplots(figsize=(10, 5))
     bar = sns.barplot(
@@ -189,9 +189,9 @@ with col2:
     st.write(
     """
     Seperti yang kita tahu, bahwa 1 hoaks dapat tersebar melalui berbagai jenis media.
-    Dari grafik di samping dapat dilihat bahwa terdapat 6 saluran penyebaran
-    hoaks. Dengan presentasi tertinggi tersebar melalui sosial media disusul
-    dengan aplikasi chatting.
+    Dari grafik di samping dapat dilihat bahwa terdapat 10 saluran penyebaran
+    hoaks. Dengan presentasi tertinggi tersebar melalui facebook disusul
+    dengan aplikasi whatsapp.
     """
     )
 
