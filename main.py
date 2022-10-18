@@ -156,6 +156,7 @@ st.write(
     """
 )
 
+# salran penyebaran hoaks
 col1, col2, = st.columns(2)
 
 with col1:
@@ -168,7 +169,7 @@ with col1:
         x="media",
         y="persentase",
         hue="tahun",
-        palette=["#f2493d", "#f57c73"],
+        palette=["#f57c73", "#f2493d"],
     )
 
     plt.xticks(rotation=30)
@@ -195,46 +196,20 @@ with col2:
     )
 
 st.write("")
+
+# isi hoaks
 col1, col2, = st.columns(2)
 
 with col1:
     st.write(
     """
-    Beralih ke ragam bentuk hoaks yang sering diterima. Dapat dilihat bahwa
-    3 ragam bentuk hoax yang sering diterima adalah: tulisan (70,7%), foto
-    dengan caption palsu (66,3%) dan repost atau berita/foto/video lama diposting
-    ulang (69,2%)
+    Dilihat dari sudut pandang isi, mayoritas isi hoaks didominasi oleh
+    isu sosial politik, sara dan pemerintahan.
     """
     )
 
+
 with col2:
-    df = data_loader.get_bentuk_hoaks()
-    colors = sns.color_palette("Purples_r", n_colors=7)
-
-    fig, ax = plt.subplots(figsize=(10, 5))
-    bar = sns.barplot(
-    x="bentuk",
-    y="persentase",
-    data=df.sort_values("persentase", ascending=False),
-    palette=colors,
-
-    )
-    plt.xticks(rotation=30)
-    ax.set_title("Ragam Bentuk Hoaks")
-    ax.set_ylim(0, 100)
-
-    for b in ax.containers:
-        ax.bar_label(b)
-
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-
-    st.pyplot(fig)
-
-st.write("")
-col1, col2, = st.columns(2)
-
-with col1:
     df = data_loader.get_isi_hoaks()
     colors = sns.color_palette("Oranges_r", n_colors=12)
 
@@ -258,14 +233,6 @@ with col1:
     ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
-
-with col2:
-    st.write(
-    """
-    Dilihat dari sudut pandang isi, mayoritas isi hoaks didominasi oleh
-    isu sosial politik, sara dan pemerintahan.
-    """
-    )
 
 st.markdown(
         """<div style='text-align: center'> Sumber data: mastel</div>""",
