@@ -54,7 +54,7 @@ try:
                 scrape = scrape(user_input)
                 title, text = scrape.title, scrape.text
             except:
-                st.error("Tidak dapat scrape artikel dari input url")
+                st.error("Tidak bisa mendapatkan data artikel dari input url")
 
         if text:
             text = re.sub(r"\n", " ", text)
@@ -107,7 +107,7 @@ try:
                         unsafe_allow_html=True,
                     )
 except:
-    st.error("Harap input new url")
+    st.error("Harap input news url")
 
 st.subheader("Referensi")
 st.write(
