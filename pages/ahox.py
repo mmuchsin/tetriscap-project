@@ -51,8 +51,8 @@ try:
         last_time = time.time()
         with st.spinner("Reading Article..."):
             try:
-            scrape = scrape(user_input)
-            title, text = scrape.title, scrape.text
+                scrape = scrape(user_input)
+                title, text = scrape.title, scrape.text
             except:
                 st.error("Tidak dapat scrape artikel dari input url")
 
