@@ -11,7 +11,7 @@ from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
 from src.preprocessor.scraper import scrape
 
-st.set_page_config(layout="wide", page_icon=("🤖"))
+st.set_page_config(layout="wide", page_icon=("🤖"), page_title="Ahox | Anti Hoax")
 
 st.write("# Anti Hoax (Ahox)")
 st.write("Aplikasi detektor hoaks berbasis AI")
