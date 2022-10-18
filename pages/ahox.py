@@ -46,11 +46,15 @@ user_input = input_column.text_input("News url", help="Input news url")
 submit = input_column.button("submit")
 
 
-if submit:
+try:
+    if submit:
     last_time = time.time()
     with st.spinner("Reading Article..."):
+        try:
         scrape = scrape(user_input)
         title, text = scrape.title, scrape.text
+        except:
+            st.error("Tidak dapat scrape artikel dari input url")
 
     if text:
         text = re.sub(r"\n", " ", text)
@@ -102,7 +106,8 @@ if submit:
                 """,
                     unsafe_allow_html=True,
                 )
-
+except:
+    st.error("Harap input new url")
 
 st.subheader("Referensi")
 st.write(
