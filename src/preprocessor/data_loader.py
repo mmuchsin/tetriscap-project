@@ -35,7 +35,7 @@ def get_penyebaran_hoaks20():
             "twitter",
             "radio",
             "koran/majalah",
-            "line"
+            "line",
             "tidak ada/tidak tahu"
         ],
         "persentase": [71.9, 31.5, 14.9, 7.7, 10.7, 8.1, 1.9, 0.5, 2.5, 0.4, 2.9],
@@ -56,7 +56,7 @@ def get_penyebaran_hoaks21():
             "twitter",
             "radio",
             "koran/majalah",
-            "line"
+            "line",
             "tidak ada/tidak tahu"
         ],
         "persentase": [62.6, 20.5, 16.4, 16.3, 14.9, 9.7, 2.7, 1.5, 1.3, 0.7, 1.1],
