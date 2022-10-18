@@ -9,7 +9,7 @@ from transformers import AutoModelForSequenceClassification, AutoModel, AutoToke
 from sklearn.metrics.pairwise import cosine_similarity
 from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
-from src.preprocessor.scrapeer import scrapee
+from src.preprocessor.scrapeer import scrape
 
 st.set_page_config(layout="wide")
 
