@@ -14,7 +14,7 @@ from src.preprocessor.scraper import scrape
 st.set_page_config(layout="wide")
 
 st.write("# Anti Hoax (Ahox)")
-st.write("aplikasi detektor hoaks berbasis AI")
+st.write("Aplikasi detektor hoaks berbasis AI")
 
 model_checkpoint = "Rifky/indobert-hoax-classification"
 base_model_checkpoint = "indobenchmark/indobert-base-p1"
@@ -37,7 +37,7 @@ input_column, reference_column = st.columns(2)
 with st.spinner("Loading Model..."):
     model, base_model, tokenizer, data = load_model()
 
-user_input = input_column.text_input("Input news url")
+user_input = input_column.text_input("News url", "Input news url")
 submit = input_column.button("submit")
 
 
