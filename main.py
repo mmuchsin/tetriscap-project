@@ -36,9 +36,6 @@ st.markdown(
     Literasi Digital di Indonesia belum sampai level “baik”. Jika skor indeks
     tertinggi adalah 5, Indeks Literasi Digital Indonesia pada tahun
     2020 dan 2021 masih berada pada level “sedang” dengan skor 3,46 dan 3,49.
-    Dari 34 provinsi di Indonesia, DI Yogyakarta memiliki Indeks Literasi Digital
-    tertinggi tahun 2021, skor 3,71 (dari skala 1-5). Sementara itu, Maluku Utara
-    merupakan provinsi dengan skor indeks terendah, yaitu 3,18.
     Jumlah hoaks dan  indeks literasi digital berkorelasi kuat secara negatif.
     Sehingga untuk lebih menekan angka penyebaran hoaks, meningkatkan literasi
     digital masyarakat akan menjadi salah satu opsi yang direkomendasikan.
