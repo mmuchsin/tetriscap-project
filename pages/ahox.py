@@ -16,9 +16,9 @@ st.set_page_config(layout="wide")
 st.write("# Anti Hoax (Ahox)")
 st.write("aplikasi pendeteksi hoaks berbasis machine learning")
 
-model_checkpoint = "muchsin/indobert-hoax-classification"
+model_checkpoint = "Rifky/indobert-hoax-classification"
 base_model_checkpoint = "indobenchmark/indobert-base-p1"
-data_checkpoint = "muchsin/indonesian-hoax-news"
+data_checkpoint = "Rifky/indonesian-hoax-news"
 label = {0: "valid", 1: "fake"}
 
 @st.cache(show_spinner=False, allow_output_mutation=True)
