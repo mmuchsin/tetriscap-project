@@ -380,8 +380,10 @@ st.markdown(
     - Amrullah, Firda, Abdul Hakim Yassi, Gusnawaty Gusnawaty. 2020. [Modalitas Dalam Teks Berita Hoaks: Kajian Linguistik Sistemik Fungsional](https://journal.unhas.ac.id/index.php/jib/article/view/8831/4976). *Jurnal Ilmu Budaya*
     - Diskominfo Bandung. 2022. [*Pengertian Hoax dan Cara Menangkalnya*.](https://diskominfo.badungkab.go.id/artikel/42985-pengertian-hoax-dan-cara-menangkalnya#:~:text=Hoax%20merupakan%20informasi%2C%20kabar%2C%20berita,diartikan%20sebagai%20berita%20yang%20bohong)
     - Fauzan Jamaludin. 2017. [*Rendahnya literasi digital jadi penyebab penyebaran berita hoax*.](https://www.merdeka.com/teknologi/rendahnya-literasi-digital-jadi-penyebab-penyebaran-berita-hoax.html)
+    - Katadata. 2020. [*Status Literasi Digital di Indonesia 2020*](https://cdn1.katadata.co.id/media/microsites/litdik/Status_Literasi_Digital_Nasional_2020.pdf)
+    - Katadata. 2021. [*Status Literasi Digital di Indonesia 2021*](https://cdn1.katadata.co.id/media/microsites/litdik/Status_Literasi_Digital_diIndonesia%20_2021_190122.pdf)
     - Kominfo. [*Informasi Publik Setiap Saat*.](https://eppid.kominfo.go.id/informasi_publik/Informasi%20Publik%20Setiap%20Saat)
-    - Kontributor Wikipedia, [*Literasi digital*](https://id.wikipedia.org/w/index.php?title=Literasi_digital&oldid=21764697), Wikipedia, Ensiklopedia Bebas, (diakses pada Oktober 9, 2022).
+    - Kontributor Wikipedia, [*Literasi digital*](https://id.wikipedia.org/w/index.php?title=Literasi_digital&oldid=21764697), Wikipedia, Ensiklopedia Bebas.
     - Vika Azkiya Dihni. 2022. [*Indeks Literasi Digital Indonesia Membaik pada 2021*.](https://databoks.katadata.co.id/datapublish/2022/07/13/indeks-literasi-digital-indonesia-membaik-pada-2021)
     """
 )
