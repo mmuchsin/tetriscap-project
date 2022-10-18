@@ -210,7 +210,7 @@ with col1:
 
 
 with col2:
-    data = get_isi_hoaks()
+    data = data_cleaner.get_isi_hoaks()
     #labels = data.groupby(["topik", "tahun"])["persentase"].max().reset_index().topik.unique()
 
     fig, ax = plt.subplots(figsize=(12, 5))
