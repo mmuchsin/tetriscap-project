@@ -87,3 +87,10 @@ if submit:
                 <small>{data["url"][i].split("/")[2]}</small>
                 <a href={data["url"][i]}><h5>{data["title"][i]}</h5></a>
                 """, unsafe_allow_html=True)
+
+
+st.subheader("Referensi")
+
+st.write(
+    "Rifky Bujana Bisri. [FND: Fake News Detection AI](https://github.com/rifkybujana/FND)"
+)
