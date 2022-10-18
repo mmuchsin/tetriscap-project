@@ -210,27 +210,28 @@ with col1:
 
 
 with col2:
-    df = data_loader.get_isi_hoaks()
-    colors = sns.color_palette("Oranges_r", n_colors=12)
+    data = get_isi_hoaks()
+    #labels = data.groupby(["topik", "tahun"])["persentase"].max().reset_index().topik.unique()
 
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(12, 5))
     bar = sns.barplot(
-    x="topik",
-    y="persentase",
-    data=df.sort_values("persentase", ascending=False),
-    palette=colors,
-
+        data=data.sort_values("persentase", ascending=False),
+        x="topik",
+        y="persentase",
+        hue="tahun",
+        palette=["#f78e60", "#eb5a1c"],
     )
+
     plt.xticks(rotation=30)
-    ax.set_xticklabels(df.sort_values("persentase", ascending=False).topik, ha="right")
-    ax.set_title("Ragam Bentuk Hoaks")
+    #ax.set_xticklabels(labels, ha="right")
+    ax.set_title("Saluran Penyebaran Hoaks")
     ax.set_ylim(0, 100)
 
     for b in ax.containers:
         ax.bar_label(b)
 
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
 
     st.pyplot(fig)
 
