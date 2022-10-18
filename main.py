@@ -367,7 +367,8 @@ st.write(
     dapat menjadi solusi potensial. Walaupun masih ada tantangan berupa literacy
     rate di Indonesia yang masih sangat rendah. Alternatif lain adalah memanfaatkan
     perkembangan teknoligi artificial intellegence, untuk mengautomisasi
-    deteksi hoaks.
+    deteksi hoaks. Aplikasi yang penulis tweak dari project FND karya Rifky Bujana Bisri
+    dapat diakses di halaman [berikut](/ahox).
     """
 )
 
