@@ -224,7 +224,7 @@ with col2:
 
     plt.xticks(rotation=30)
     #ax.set_xticklabels(labels, ha="right")
-    ax.set_title("Saluran Penyebaran Hoaks")
+    ax.set_title("Ragam Konten Hoaks")
     ax.set_ylim(0, 100)
 
     for b in ax.containers:
