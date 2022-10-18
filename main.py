@@ -29,13 +29,19 @@ st.subheader("Ringkasan Eksekutif")
 
 st.markdown(
     """
+    Darti awal tahun 2020 sampai akhir tahun 2021 trend jumlah hoaks mengalami
+    penurunan. Pada tahun 2020 tercatat total 3.447 total hoaks dengan rata-
+    rata 287 hoaks/bulan. Pada tahun 2021 tercatat total 1.921 total hoaks
+    dengan rata-rata 160 hoaks/bulan.
     Literasi Digital di Indonesia belum sampai level “baik”. Jika skor indeks
-    tertinggi adalah 5, indeks literasi digital Indonesia baru berada sedikit di
-    atas angka 3. Lebih tepatnya Indeks Literasi Digital Indonesia pada tahun
+    tertinggi adalah 5, Indeks Literasi Digital Indonesia pada tahun
     2020 dan 2021 masih berada pada level “sedang” dengan skor 3,46 dan 3,49.
     Dari 34 provinsi di Indonesia, DI Yogyakarta memiliki Indeks Literasi Digital
     tertinggi tahun 2021, skor 3,71 (dari skala 1-5). Sementara itu, Maluku Utara
     merupakan provinsi dengan skor indeks terendah, yaitu 3,18.
+    Jumlah hoaks dan  indeks literasi digital berkorelasi kuat secara negatif.
+    Sehingga untuk lebih menekan angka penyebaran hoaks, meningkatkan literasi
+    digital masyarakat akan menjadi salah satu opsi yang direkomendasikan.
 
     """
 )
