@@ -368,7 +368,7 @@ st.write(
     rate di Indonesia yang masih sangat rendah. Alternatif lain adalah memanfaatkan
     perkembangan teknoligi artificial intellegence, untuk mengautomisasi
     deteksi hoaks. Aplikasi yang penulis tweak dari project FND karya Rifky Bujana Bisri
-    dapat diakses di halama [berikut](pages/ahox).
+    dapat diakses di halaman [berikut](pages/ahox).
     """
 )
 
