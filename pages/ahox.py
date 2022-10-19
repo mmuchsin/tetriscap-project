@@ -94,7 +94,7 @@ try:
                     unsafe_allow_html=True,
                 )
                 prediction = np.argmax(result, axis=-1)
-                if label[prediction]:  # 0 == valid 1 == "fake"
+                if prediction:  # 0 == valid 1 == "fake"
                     input_column.error(f"This news is {label[prediction]}.")
                     input_column.text(f"{int(result[prediction]*100)}% confidence")
                     input_column.progress(result[prediction])
