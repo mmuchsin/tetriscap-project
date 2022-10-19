@@ -42,7 +42,7 @@ input_column, reference_column = st.columns(2)
 with st.spinner("Loading Model..."):
     model, base_model, tokenizer, data = load_model()
 
-user_input = input_column.text_input("News url", help="Input news url")
+user_input = input_column.text_input("Article url", help="Input article url")
 submit = input_column.button("submit")
 
 
@@ -94,9 +94,14 @@ try:
                     unsafe_allow_html=True,
                 )
                 prediction = np.argmax(result, axis=-1)
-                input_column.success(f"This news is {label[prediction]}.")
-                input_column.text(f"{int(result[prediction]*100)}% confidence")
-                input_column.progress(result[prediction])
+                if prediction:  # based on label 0 == valid 1 == "fake"
+                    input_column.error(f"This news is {label[prediction]}.")
+                    input_column.text(f"{int(result[prediction]*100)}% confidence")
+                    input_column.progress(result[prediction])
+                else:
+                    input_column.success(f"This news is {label[prediction]}.")
+                    input_column.text(f"{int(result[prediction]*100)}% confidence")
+                    input_column.progress(result[prediction])
 
                 for i in sorted[:5]:
                     reference_column.write(
