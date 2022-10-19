@@ -42,7 +42,7 @@ input_column, reference_column = st.columns(2)
 with st.spinner("Loading Model..."):
     model, base_model, tokenizer, data = load_model()
 
-user_input = input_column.text_input("News url", help="Input news url")
+user_input = input_column.text_input("Article url", help="Input article url")
 submit = input_column.button("submit")
 
 
