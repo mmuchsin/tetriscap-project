@@ -298,7 +298,7 @@ with col1:
     ax.bar_label(ax.containers[0], padding=1)
 
     ax.vlines(np.average(lp20.indeks_literasi_digital),
-              ymin=-1,
+              ymin=-0.5,
               ymax=34,
               color='grey',
               linestyles='dashed'
@@ -333,7 +333,7 @@ with col2:
     ax.bar_label(ax.containers[0], padding=1)
 
     ax.vlines(np.average(lp21.indeks_literasi_digital),
-              ymin=-1,
+              ymin=-0.5,
               ymax=34,
               color='grey',
               linestyles='dashed')
