@@ -36,7 +36,7 @@ st.markdown(
     Literasi Digital di Indonesia belum sampai level “baik”. Jika skor indeks
     tertinggi adalah 5, **Indeks Literasi Digital Indonesia** pada tahun
     **2020 dan 2021** masih berada pada level **“sedang”** dengan **skor 3,46 dan 3,49**.
-    Jumlah hoaks dan  indeks literasi digital berkorelasi kuat secara negatif.
+    Jumlah hoaks dan  indeks literasi digital ber**korelasi** kuat secara **negatif**.
     Sehingga untuk lebih menekan angka penyebaran hoaks, meningkatkan literasi
     digital masyarakat akan menjadi salah satu opsi yang direkomendasikan.
 
