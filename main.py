@@ -335,6 +335,11 @@ with col2:
     ax.set_title("Indeks Literasi Digital di 34 Provinsi 2021")
     ax.set_xlim(0, 5)
     ax.set_ylim(34, -2)
+
+    plt.setp(ax.get_yticklabels()[0], color="#c99004")
+    plt.setp(ax.get_yticklabels()[-15], color="#c99004")
+    plt.setp(ax.get_yticklabels()[-1], color="#c99004")
+
     ax.bar_label(ax.containers[0], padding=1)
 
     ax.vlines(np.average(lp21.indeks_literasi_digital),
