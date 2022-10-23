@@ -307,14 +307,18 @@ with col1:
 
 with col2:
     lp21 = data_cleaner.get_literasi_prov21_clean()
-    colors = sns.color_palette("Greens_r", n_colors=34)
+    barcol = []
+    for i in lp21.sort_values("indeks_literasi_digital", ascending=False).indeks_literasi_digital:
+        if i > 4:
+            barcol.append(green)
+        barcol.append(yellow)
+    colors = sns.color_palette(barcol, n_colors=34)
     fig, ax = plt.subplots(figsize=(8, 10))
     bar = sns.barplot(
         data=lp21.sort_values("indeks_literasi_digital", ascending=False),
         x="indeks_literasi_digital",
         y="provinsi",
         palette=colors,
-        alpha=0.9
     )
 
     ax.set_title("Indeks Literasi Digital di 34 Provinsi 2021")
