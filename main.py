@@ -382,8 +382,8 @@ st.write(
     >*Secara statistik, korelasi antara jumlah hoaks dan skor literasi digital sebesar -1.*
 
     Dengan kata lain, hubungan antara hoaks dan literasi digital
-    berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun,
-    begitu juga sebaliknya.
+    berbanding terbalik, dimana saat yang satu naik yang satunya lagi turun.
+    Begitu juga sebaliknya, saat yang satu turun yang satunya lagi naik.
     """
 )
 
