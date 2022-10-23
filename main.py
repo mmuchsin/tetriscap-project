@@ -267,7 +267,7 @@ st.write(
     untuk **menggunakan dan memanfaatkan** digital tools untuk mencapai suatu
     hal. Untuk mengukur tingkat digital literasi membutuhkan framework khusus
     yaitu indeks literasi digital. Indeks literasi digital memiliki rentang
-    skor 0-5 dengan kategori **buruk (0-2), sedang (2-4) dan baik (4-5).**
+    skor 0-5 dengan kategori **buruk (0-2), sedang (2-4)** dan **baik (4-5).**
     """
 )
 
