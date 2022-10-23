@@ -30,12 +30,12 @@ st.subheader("Ringkasan Eksekutif")
 st.markdown(
     """
     Darti awal tahun 2020 sampai akhir tahun 2021 **trend** jumlah hoaks **mengalami
-    penurunan**. Pada tahun **2020** tercatat **total 3.447**  hoaks dengan rata-
-    rata 287 hoaks/bulan. Pada tahun 2021 tercatat **total 1.921**  hoaks
+    penurunan**. Pada tahun **2020** tercatat **total 3.447**  hoaks dengan **rata-
+    rata 287 hoaks/bulan**. Pada tahun 2021 tercatat **total 1.921**  hoaks
     dengan **rata-rata 160 hoaks/bulan**.
     Literasi Digital di Indonesia belum sampai level “baik”. Jika skor indeks
-    tertinggi adalah 5, Indeks Literasi Digital Indonesia pada tahun
-    2020 dan 2021 masih berada pada level “sedang” dengan skor 3,46 dan 3,49.
+    tertinggi adalah 5, **Indeks Literasi Digital Indonesia** pada tahun
+    **2020 dan 2021** masih berada pada level **“sedang”** dengan **skor 3,46 dan 3,49**.
     Jumlah hoaks dan  indeks literasi digital berkorelasi kuat secara negatif.
     Sehingga untuk lebih menekan angka penyebaran hoaks, meningkatkan literasi
     digital masyarakat akan menjadi salah satu opsi yang direkomendasikan.
