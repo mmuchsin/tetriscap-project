@@ -36,13 +36,14 @@ def get_penyebaran_hoaks20():
             "radio",
             "koran/majalah",
             "line",
-            "tidak ada/tidak tahu"
+            "tidak ada/tidak tahu",
         ],
         "persentase": [71.9, 31.5, 14.9, 7.7, 10.7, 8.1, 1.9, 0.5, 2.5, 0.4, 2.9],
-        "tahun": [2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020]
+        "tahun": [2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020],
     }
     df = pd.DataFrame(data)
     return df
+
 
 def get_penyebaran_hoaks21():
     data = {
@@ -57,10 +58,10 @@ def get_penyebaran_hoaks21():
             "radio",
             "koran/majalah",
             "line",
-            "tidak ada/tidak tahu"
+            "tidak ada/tidak tahu",
         ],
         "persentase": [62.6, 20.5, 16.4, 16.3, 14.9, 9.7, 2.7, 1.5, 1.3, 0.7, 1.1],
-        "tahun": [2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021]
+        "tahun": [2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021],
     }
     df = pd.DataFrame(data)
     return df
@@ -68,7 +69,7 @@ def get_penyebaran_hoaks21():
 
 def get_isi_hoaks20():
     data = {
-       "topik": [
+        "topik": [
             "politik",
             "kesehatan",
             "agama",
@@ -79,7 +80,7 @@ def get_isi_hoaks20():
             "lainnya",
         ],
         "persentase": [67.2, 46.3, 33.2, 21.9, 28.1, 12.4, 2.3, 1.4],
-        "tahun": [2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020]
+        "tahun": [2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020],
     }
     df = pd.DataFrame(data)
     return df
@@ -98,7 +99,7 @@ def get_isi_hoaks21():
             "lainnya",
         ],
         "persentase": [69.3, 39.7, 29.2, 21.4, 13.4, 10.9, 0, 0],
-        "tahun": [2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021]
+        "tahun": [2021, 2021, 2021, 2021, 2021, 2021, 2021, 2021],
     }
     df = pd.DataFrame(data)
     return df
@@ -106,13 +107,11 @@ def get_isi_hoaks21():
 
 def get_literasi_prov20():
     df = pd.read_excel(
-        DATA_DIR.joinpath("literasi_prov_2020.xlsx"),
-        sheet_name="Sheet2"
+        DATA_DIR.joinpath("literasi_prov_2020.xlsx"), sheet_name="Sheet2"
     )
     return df
 
+
 def get_literasi_prov21():
-    df = pd.read_excel(
-        DATA_DIR.joinpath("literasi_prov_2021.xlsx")
-    )
+    df = pd.read_excel(DATA_DIR.joinpath("literasi_prov_2021.xlsx"))
     return df

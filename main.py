@@ -107,8 +107,20 @@ dots = sns.scatterplot(
     legend=False,
     palette=palette,
 )
-ax.hlines(np.average(cpd.query("year == 2020").total), xmin=0, xmax=13, color="grey", linestyles="dashed")
-ax.hlines(np.average(cpd.query("year == 2021").total), xmin=0, xmax=13, color="grey", linestyles="dashed")
+ax.hlines(
+    np.average(cpd.query("year == 2020").total),
+    xmin=0,
+    xmax=13,
+    color="grey",
+    linestyles="dashed",
+)
+ax.hlines(
+    np.average(cpd.query("year == 2021").total),
+    xmin=0,
+    xmax=13,
+    color="grey",
+    linestyles="dashed",
+)
 
 ax.annotate("rata-rata 2020: 287", (10.9, 292))
 ax.annotate("rata-rata 2021: 160", (10.9, 165))
@@ -120,25 +132,25 @@ x_data = ax.get_lines()[0].get_xdata()
 y_data = ax.get_lines()[0].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-            labels = f"{y_value:.0f}"
-            ax.annotate(
-                text=labels,
-                xy=(x_value - 0.17, y_value + 7),
-            )
+    labels = f"{y_value:.0f}"
+    ax.annotate(
+        text=labels,
+        xy=(x_value - 0.17, y_value + 7),
+    )
 
 x_data = ax.get_lines()[1].get_xdata()
 y_data = ax.get_lines()[1].get_ydata()
 
 for x_value, y_value in zip(x_data, y_data):
-            labels = f"{y_value:.0f}"
-            ax.annotate(
-                text=labels,
-                xy=(x_value - 0.17, y_value + 7),
-            )
+    labels = f"{y_value:.0f}"
+    ax.annotate(
+        text=labels,
+        xy=(x_value - 0.17, y_value + 7),
+    )
 
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
 frame = plt.gca()
 frame.axes.get_yaxis().set_visible(False)
 
@@ -171,7 +183,10 @@ st.write(
 )
 
 # saluran penyebaran hoaks
-col1, col2, = st.columns(2)
+(
+    col1,
+    col2,
+) = st.columns(2)
 
 with col1:
     data = data_cleaner.get_penyebaran_hoaks()
@@ -194,14 +209,14 @@ with col1:
     for b in ax.containers:
         ax.bar_label(b)
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
 with col2:
     st.write(
-    """
+        """
     Dari segi platform, dapat dilihat bahwa platform dengan persentase penyebaran
     hoaks tertinggi adalah facebook disusul dengan aplikasi whatsapp dan youtube.
     """
@@ -210,11 +225,14 @@ with col2:
 st.write("")
 
 # isi hoaks
-col1, col2, = st.columns(2)
+(
+    col1,
+    col2,
+) = st.columns(2)
 
 with col1:
     st.write(
-    """
+        """
     Dilihat dari sudut pandang isi, konten politik sebagai isu yang paling banyak
     mengandung hoaks atau informasi keliru. Disusul oleh konten kesehatan dan
     agama.
@@ -224,7 +242,7 @@ with col1:
 
 with col2:
     data = data_cleaner.get_isi_hoaks()
-    #labels = data.groupby(["topik", "tahun"])["persentase"].max().reset_index().topik.unique()
+    # labels = data.groupby(["topik", "tahun"])["persentase"].max().reset_index().topik.unique()
 
     fig, ax = plt.subplots(figsize=(12, 5))
     bar = sns.barplot(
@@ -236,22 +254,22 @@ with col2:
     )
 
     plt.xticks(rotation=30)
-    #ax.set_xticklabels(labels, ha="right")
+    # ax.set_xticklabels(labels, ha="right")
     ax.set_title("Ragam Konten Hoaks")
     ax.set_ylim(0, 100)
 
     for b in ax.containers:
         ax.bar_label(b)
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
 st.markdown(
-        """<div style='text-align: center'> Sumber data: katadata</div>""",
-        unsafe_allow_html=True,
-    )
+    """<div style='text-align: center'> Sumber data: katadata</div>""",
+    unsafe_allow_html=True,
+)
 
 # Literasi Digital di Indonesia
 st.subheader("Literasi Digital di Indonesia")
@@ -279,7 +297,9 @@ with col1:
     green = "#c1ffd7"
     yellow = "#fcffa6"
     barcol = []
-    for i in lp20.sort_values("indeks_literasi_digital", ascending=False).indeks_literasi_digital:
+    for i in lp20.sort_values(
+        "indeks_literasi_digital", ascending=False
+    ).indeks_literasi_digital:
         if i > 4:
             barcol.append(green)
         barcol.append(yellow)
@@ -302,16 +322,17 @@ with col1:
 
     ax.bar_label(ax.containers[0], padding=1)
 
-    ax.vlines(np.average(lp20.indeks_literasi_digital),
-              ymin=-0.75,
-              ymax=34,
-              color='grey',
-              linestyles='dashed'
-              )
+    ax.vlines(
+        np.average(lp20.indeks_literasi_digital),
+        ymin=-0.75,
+        ymax=34,
+        color="grey",
+        linestyles="dashed",
+    )
     ax.annotate("indeks nasional: 3.46", (3, -1))
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
@@ -319,7 +340,9 @@ with col1:
 with col2:
     lp21 = data_cleaner.get_literasi_prov21_clean()
     barcol = []
-    for i in lp21.sort_values("indeks_literasi_digital", ascending=False).indeks_literasi_digital:
+    for i in lp21.sort_values(
+        "indeks_literasi_digital", ascending=False
+    ).indeks_literasi_digital:
         if i > 4:
             barcol.append(green)
         barcol.append(yellow)
@@ -342,15 +365,17 @@ with col2:
 
     ax.bar_label(ax.containers[0], padding=1)
 
-    ax.vlines(np.average(lp21.indeks_literasi_digital),
-              ymin=-0.75,
-              ymax=34,
-              color='grey',
-              linestyles='dashed')
+    ax.vlines(
+        np.average(lp21.indeks_literasi_digital),
+        ymin=-0.75,
+        ymax=34,
+        color="grey",
+        linestyles="dashed",
+    )
     ax.annotate("indeks nasional: 3.49", (3, -1))
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     st.pyplot(fig)
 
@@ -363,7 +388,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.write(
-    """
+        """
     Pada tahun 2020 skor Indeks Literasi Digital per provinsi ada di rentang 4,06
     hingga 3,11. Skor tertinggi dimiliki oleh Provinsi Sulawesi Tengah (4,06) dan
     skor terendah dimiliki oleh Provinsi Jawa Timur (3,17). Sementara itu,
@@ -374,7 +399,7 @@ with col1:
 
 with col2:
     st.write(
-    """
+        """
     Pada tahun 2021 skor Indeks Literasi Digital per provinsi ada di rentang 3,71
     hingga 3,18. Skor tertinggi dimiliki oleh Provinsi DI Yogyakarta (3,71) dan
     skor terendah dimiliki oleh Provinsi Maluku Utara (3,18). Sementara itu,
