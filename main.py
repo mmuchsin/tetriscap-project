@@ -61,7 +61,8 @@ st.markdown(
     penyebaran hoaks. Namun masih banyak masyarakat yang secara tidak sadar
     menjadi sukarelawan dalam penyebaran hoaks. Sehingga perlu adanya upaya
     peningkatan literasi media bagi masyarakat, khususnya literasi digital.
-
+    Berikut merupakan kajian tentang pengaruh literasi digital terhadap
+    penyebaran hoaks.
     """
 )
 
