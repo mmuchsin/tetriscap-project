@@ -279,7 +279,7 @@ with col1:
     green = "#c1ffd7"
     yellow = "#fcffa6"
     barcol = []
-    for i in lt2020.sort_values("indeks_literasi_digital", ascending=False).indeks_literasi_digital:
+    for i in lp20.sort_values("indeks_literasi_digital", ascending=False).indeks_literasi_digital:
         if i > 4:
             barcol.append(green)
         barcol.append(yellow)
