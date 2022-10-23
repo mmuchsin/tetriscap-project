@@ -293,6 +293,7 @@ with col1:
     )
 
     ax.set_title("Indeks Literasi Digital di 34 Provinsi 2020")
+    ax.set_xlim(0, 5)
     ax.set_ylim(35, -1)
     ax.bar_label(ax.containers[0], padding=1)
 
@@ -322,6 +323,7 @@ with col2:
     )
 
     ax.set_title("Indeks Literasi Digital di 34 Provinsi 2021")
+    ax.set_xlim(0, 5)
     ax.set_ylim(35, -1)
     ax.bar_label(ax.containers[0], padding=1)
 
