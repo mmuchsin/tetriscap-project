@@ -227,6 +227,7 @@ with col2:
 
 st.write("")
 
+
 # isi hoaks
 (
     col1,
