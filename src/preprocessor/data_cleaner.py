@@ -97,6 +97,7 @@ def get_penyebaran_hoaks():
     df = pd.concat([df1, df2])
     return df
 
+
 def get_isi_hoaks():
     df1 = data_loader.get_isi_hoaks20()
     df2 = data_loader.get_isi_hoaks21()

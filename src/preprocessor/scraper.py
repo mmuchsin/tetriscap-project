@@ -1,5 +1,6 @@
 from newspaper import Article
 
+
 def scrape(url):
     """Scrap article from url
 
@@ -10,7 +11,7 @@ def scrape(url):
         article (`string`): news content
     """
 
-    article = Article(url, language='id')
+    article = Article(url, language="id")
     article.download()
     article.parse()
 
