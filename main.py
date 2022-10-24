@@ -184,6 +184,7 @@ st.write(
     """
 )
 
+
 # saluran penyebaran hoaks
 (
     col1,
