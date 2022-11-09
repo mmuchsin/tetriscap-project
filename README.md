@@ -1,5 +1,7 @@
 # tetris capstone poject
-
+![Python](https://img.shields.io/pypi/pyversions/tensorflow.svg)
+![PyPI](https://badge.fury.io/py/tensorflow.svg)
+![GitHub](https://img.shields.io/github/license/mmuchsin/tetriscap_project?color=green)
 ## Tentang Project
 Project sebagai tugas akhir [DQLab Tetris 2022](https://dqlab.id/beasiswa-fast-track-data-analytics-dqlab-dts-proa), mengenai analisis sederhana hubungan antara literasi digital dengan hoaks di indonesia dari Januari 2020 - Desember 2021, disertai aplikasi sederhana berbasis ai untuk mendeteksi hoaks dengan menginputkan url.
 
