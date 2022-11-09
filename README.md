@@ -1,7 +1,7 @@
 # tetris capstone poject
 
 ## Tentang Project
-Project sebagai tugas akhir DQLab Tetris 2022, mengenai analisis sederhana hubungan antara literasi digital dengan hoaks di indonesia tahun 2021-2022, disertai aplikasi sederhana berbasis ai untuk mendeksi hoaks dengan menginputkan url.
+Project sebagai tugas akhir [DQLab Tetris 2022](https://dqlab.id/beasiswa-fast-track-data-analytics-dqlab-dts-proa), mengenai analisis sederhana hubungan antara literasi digital dengan hoaks di indonesia tahun 2021-2022, disertai aplikasi sederhana berbasis ai untuk mendeksi hoaks dengan menginputkan url.
 
 ## Tech Stack
 anaconda, python, streamlit, hunggingface, pytorch
