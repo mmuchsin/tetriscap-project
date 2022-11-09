@@ -4,9 +4,12 @@
 Project sebagai tugas akhir DQLab Tetris 2022, mengenai analisis sederhana hubungan antara literasi digital dengan hoaks di indonesia tahun 2021-2022, disertai aplikasi sederhana berbasis ai untuk mendeksi hoaks dengan menginputkan url.
 
 ## Tech Stack
-python, streamlit, hunggingface, pytorch
+anaconda, python, streamlit, hunggingface, pytorch
 
-## Installation
+## Live Demo
+[streamlit cloud](https://mmuchsin-tetriscap-dashboard-main-ynlsep.streamlitapp.com/)
+
+## Run Locally
 Pastikan anaconda sudah terinstall. Petunjuk installasi bisa dilihat [disini.](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
 Buat environment terlebih dahulu.
@@ -17,6 +20,16 @@ conda create -n env_name
 Aktifkan environment.
 ```bash
 conda activate env_name
+```
+
+Clone the project
+```bash
+  git clone https://github.com/mmuchsin/tetriscap_project.git
+```
+
+Masuk ke project directory
+```bash
+  cd tetriscap_project
 ```
 
 Install requirements.
@@ -32,7 +45,6 @@ atau
 ```bash
 python -m streamlit run main.py
 ```
-[live demo](https://mmuchsin-tetriscap-dashboard-main-ynlsep.streamlitapp.com/)
 
 ## License
 [GPL-3](https://choosealicense.com/licenses/gpl-3.0/)
