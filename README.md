@@ -12,7 +12,7 @@ anaconda, python, streamlit, hunggingface, pytorch
 ## Run Locally
 Pastikan anaconda sudah terinstall. Petunjuk installasi bisa dilihat [disini.](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Buat environment terlebih dahulu. Nama `env` bisa diganti sesuai kebutuhan.
+Buat environment terlebih dahulu. Nama `env_name` bisa diganti sesuai kebutuhan.
 ```bash
 conda create -n env_name
 ```
